@@ -10,31 +10,32 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/notes$Mr__Zamora__Mad_Lib.coverage" NAME="Mr. Zamora- Mad Lib Coverage Results" MODIFIED="1540933179567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/notes$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1541021855349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/notes$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1541457296668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1788373680">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.54" value="2" />
           <entry key="project.open.time.90" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="py" value="3" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="3" />
+          <entry key="Python" value="4" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
@@ -42,13 +43,13 @@
         <counts>
           <entry key="css" value="134" />
           <entry key="dummy" value="12" />
-          <entry key="py" value="4236" />
+          <entry key="py" value="4641" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="4236" />
+          <entry key="Python" value="4641" />
           <entry key="Scratch" value="134" />
         </counts>
       </usages-collector>
@@ -59,25 +60,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python file.py">
+        <entry file="file://$PROJECT_DIR$/Basic Python Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="458">
+              <caret line="150" column="3" selection-start-line="150" selection-start-column="3" selection-end-line="150" selection-end-column="3" />
+              <folding>
+                <marker date="1541456267190" expanded="true" signature="1427:1432" ph="..." />
+                <marker date="1541456267190" expanded="true" signature="1510:1515" ph="..." />
+                <marker date="1541456267190" expanded="true" signature="1582:1644" ph="..." />
+                <marker date="1541456267190" expanded="true" signature="2189:2194" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Basic Python Notes.py">
+        <entry file="file://$PROJECT_DIR$/Guessing number.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
-              <folding>
-                <marker date="1541021808761" expanded="true" signature="1427:1432" ph="..." />
-                <marker date="1541021808761" expanded="true" signature="1510:1515" ph="..." />
-                <marker date="1541021808761" expanded="true" signature="1582:1644" ph="..." />
-                <marker date="1541021808761" expanded="true" signature="2189:2194" ph="..." />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -111,6 +112,7 @@
         <option value="$PROJECT_DIR$/python file.py" />
         <option value="$PROJECT_DIR$/Mr. Zamora- Mad Lib.py" />
         <option value="$PROJECT_DIR$/Basic Python Notes.py" />
+        <option value="$PROJECT_DIR$/Guessing number.py" />
       </list>
     </option>
   </component>
@@ -236,12 +238,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2655068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26928896" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30932897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -284,13 +286,20 @@
     <entry file="file://$PROJECT_DIR$/Basic Python Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
-          <caret line="140" column="28" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="28" />
+          <caret line="150" column="3" selection-start-line="150" selection-start-column="3" selection-end-line="150" selection-end-column="3" />
           <folding>
-            <marker date="1541021808761" expanded="true" signature="1427:1432" ph="..." />
-            <marker date="1541021808761" expanded="true" signature="1510:1515" ph="..." />
-            <marker date="1541021808761" expanded="true" signature="1582:1644" ph="..." />
-            <marker date="1541021808761" expanded="true" signature="2189:2194" ph="..." />
+            <marker date="1541456267190" expanded="true" signature="1427:1432" ph="..." />
+            <marker date="1541456267190" expanded="true" signature="1510:1515" ph="..." />
+            <marker date="1541456267190" expanded="true" signature="1582:1644" ph="..." />
+            <marker date="1541456267190" expanded="true" signature="2189:2194" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guessing number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
