@@ -177,4 +177,60 @@ for item in fruit:
 
 icecreamflavours = ['chocolate', 'vanilla', 'mint chocolate', 'cookies n cream', 'strawberry', ' cookie dough',]
 
-new_lsit = ["eggs", "cheese", "oranges", "raspberries",]
+new_list = ["eggs", "cheese", "oranges", "raspberries",]
+new_list[2] = "apples"
+print("The last thing in the list is %s" % icecreamflavours[len(icecreamflavours)- 1])
+
+food_list = ["pizza", "tamales", "tacos", "pie", "enchiladas", "burrito", "sushi", "poke", "flan", "poutine", "noodles",
+             "chicken", 'chili', "Hot wings", "salmon", "chips", "lasagna", "soup", "fettuccine", "salad", "carne asada"]
+
+# Slicing
+print(food_list[2:5])
+print(food_list[3:4])
+print(food_list[10:])
+print(food_list[:5])
+
+# Adding stuff to a list (part 1)
+food_list.append("oranges")
+food_list.append("bacon")
+print(food_list)
+# Everything is in the form Object.method(parameters)
+
+#Adding to a list  (not at the end)
+food_list.insert(2, "Ramen")
+print(food_list)
+
+# Removing from a list
+food_list.remove("tacos")
+food_list.remove("pie")
+print(food_list)
+# This removes the specific item from the list
+# Sometimes, you don't know what is in the list, but you know
+# you want to get rid of something at a specefic index
+food_list.pop(0)
+print(food_list)
+# Notice that "pizza" is no longer in the list because was is at index 0.
+
+food_list = ("pancakes", "waffles", "cereal", "oatmeal")
+food_list.remove("waffles")
+print(food_list)
+food_list.pop(0)
+print(food_list)
+
+# Fidning things in a lists
+print(food_lists.index("chicken"))
+# This printed 9 for me, so chicken must be at index 9.
+# This is an easy way of finding things in a list.
+
+# Things I notice people do:
+# Some people have made lists with parentheses instead of brackets
+brands = ("apple", "samsung", "HTC")
+# This is a Tuple, not a list. Tuples are immutable (cannont be changed)
+
+# Changing things into a list
+string1 = "turquoise"
+list1 = list(string1)
+print (list1)
+
+# Changing back into a string (list-string)
+print("!".join(list1))
