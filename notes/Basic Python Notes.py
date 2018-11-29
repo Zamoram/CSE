@@ -214,11 +214,16 @@ print(food_list)
 food_list = ("pancakes", "waffles", "cereal", "oatmeal")
 food_list.remove("waffles")
 print(food_list)
+# This removes the specefic item from the list.
+
+# Removing from a list (pt 2)
+# Sometimes, you don't know what is in the list, but you know
+# you want to get rid of something at a specefic index
 food_list.pop(0)
 print(food_list)
 
-# Fidning things in a lists
-print(food_lists.index("chicken"))
+# Finding things in a lists
+print(food_list.index("chicken"))
 # This printed 9 for me, so chicken must be at index 9.
 # This is an easy way of finding things in a list.
 
@@ -232,5 +237,11 @@ string1 = "turquoise"
 list1 = list(string1)
 print (list1)
 
+# Hangman hints
+for i in range (len(list1)):   # i goes through all indices
+    if list1[i] == "u":  # if we find a "U"
+        list1.pop(i)   # Remove the i-th index
+        list1.insert(i,"*")  # Put a * there instead
+
 # Changing back into a string (list-string)
-print("!".join(list1))
+print("".join(list1))
