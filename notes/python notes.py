@@ -1,55 +1,45 @@
 """
 print("Hello World!")
-
 # Apparently I'm going to slow, so I will speed up
 # This is a comment
 # This has no effect on the code
 # This is used for a variety of things, such as
-# 1.Making personal motes about my code
-# 2.Commenting out code that does not work
-
+# 1. Making personal notes about my code
+# 2. Commenting out code that does not work
 print("Notice what is happening here.")
-print()   # This creates a new line
-print()   # Do you notice the underline here?
+print()  # This creates a new line
+print()  # Do you notice the underline here?
 # Hover over top it to see what is wrong.
-
 # Math
 print(5 + 3)
 print(5 - 3)
 print(4 * 5)
 print(6 / 5)
 print()
-
 # Semi-advanced math
-print("Figure this out..")
+print("Figure this out...")
 print(6 // 4)
 print(12 // 3)
-print(9 // 4)   # This will ONLY give me a whole number
+print(9 // 4)  # This will ONLY give me a whole number
 print()
-
 print("Figure this out too...")
 print(6 % 4)
 print(5 % 3)
 print(9 % 4)
-
 # Defining Variables
 car_name = "Wiebe mobile"  # String
 car_type = "Tesla"  # String
 car_cylinders = 16  # Integer
-car_miles_per_gallon= 0.01  # Float
-
+car_miles_per_gallon = 0.01  # Float
 print("I have a car called %s. It's pretty nice." % car_name)
-print("It has %d cylinders, but gets %f mpg" %(car_cylinders, car_miles_per_gallon))
-
+print("It has %d cylinders, but gets %f mpg" % (car_cylinders, car_miles_per_gallon))
 # Taking Input
 name = input("What is your name? ")
 print("Hello %s" % name)
-
 age = input("How old are you?")
-print("%s? You belong in a museum!" %  age)
-
+print("%s? You belong in a museum!" % age)
 # Recasting
-real_age = int(input("How old are you again?"))
+real_age = int(input("How old are you again? "))
 hidden_age = real_age + 5
 print(hidden_age)
 """
@@ -74,7 +64,7 @@ say_it()
 
 # f(x) = 2x + 3
 def f(x):
-    print (2*x + 3)
+    print(2*x + 3)
 
 
 f(1)
@@ -82,7 +72,7 @@ f(5)
 f(5000)
 
 
-def distance(x1,y1, x2, y2 ):
+def distance(x1, y1, x2, y2):
     dist = ((x2-x1)**2 + (y2-y1)**2)**(1/2)
     print(dist)
 
@@ -94,8 +84,8 @@ distance(0, 0, 5, 12)
 for i in (1, 2, 3):
     say_it()
 
-for i in range(5):   # Range(5) gives the numbers 0-4
-    print(i)
+for i in range(5):  # Range(5) gives the numbers 0-4
+    f(i)
 
 for i in range(5):
     print(i**2)
@@ -121,7 +111,7 @@ if sunny:
 
 
 def grade_calc(percentage):
-    if percentage >=90:
+    if percentage >= 90:
         return "A"
     elif percentage >= 80:
         return "B"
@@ -149,15 +139,10 @@ print(3 != 4)
 a = 3  # A is set to 3
 a == 3 # Is a equal to 3?
 """
-print(3 !=4)
-"""
-a = 3 # A is set to 3
-a = 3 # Is a equal to 3?
-"""
 
-# Creating a List
+# Creating a list
 fruit = ['apples', 'oranges', 'blackberries', 'strawberries',
-         'blueberries', "raspberries", "pineapple", "mango", "coconut"]
+         'blueberries', "raspberries", "pineapple", "mango", "coconut"]  # USE SQUARE BRACKETS!!!!!!
 print(fruit)
 
 # Pulling items from a list
@@ -175,14 +160,21 @@ print(fruit)
 for item in fruit:
     print(item)
 
-icecreamflavours = ['chocolate', 'vanilla', 'mint chocolate', 'cookies n cream', 'strawberry', ' cookie dough',]
+'''
+1. Make a list
+2. change the 3rd thing in the list
+3. print the item
+4. print the full list
+'''
 
-new_list = ["eggs", "cheese", "oranges", "raspberries",]
+new_list = ["eggs", "cheese", "oranges", "raspberries"]
 new_list[2] = "apples"
-print("The last thing in the list is %s" % icecreamflavours[len(icecreamflavours)- 1])
+print("The last thing in the list is %s" % new_list[len(new_list) - 1])
 
-food_list = ["pizza", "tamales", "tacos", "pie", "enchiladas", "burrito", "sushi", "poke", "flan", "poutine", "noodles",
-             "chicken", 'chili', "Hot wings", "salmon", "chips", "lasagna", "soup", "fettuccine", "salad", "carne asada"]
+food_list = ["pizza", "tamales", "tacos", "pie", "enchiladas", "burrito",
+             "sushi", "poke", "flan", "poutine", "noodles", "chicken",
+             'chili', "Hot wings", "salmon", "chips", "lasagna", "soup",
+             "fettuccine", "salad", "carne asada"]
 
 # Slicing
 print(food_list[2:5])
@@ -196,8 +188,8 @@ food_list.append("bacon")
 print(food_list)
 # Everything is in the form Object.method(parameters)
 
-#Adding to a list  (not at the end)
-food_list.insert(2, "Ramen")
+# Adding to a list (not at the end)
+food_list.insert(2, "Goat")
 print(food_list)
 
 # Removing from a list
@@ -205,22 +197,23 @@ food_list.remove("tacos")
 food_list.remove("pie")
 print(food_list)
 # This removes the specific item from the list
+
+# Removing from a list (pt 2)
 # Sometimes, you don't know what is in the list, but you know
-# you want to get rid of something at a specefic index
+# you want to get rid of something at a specific index
 food_list.pop(0)
 print(food_list)
 # Notice that "pizza" is no longer in the list because was is at index 0.
 
+# Practice time...
+"""
+1. Make a new list with 3 items
+2. Add a 4th item to the list
+3. Remove one of the first three items from the list.
+I'll come around and check progress/fix errors.
+"""
 
-# This removes the specefic item from the list.
-
-# Removing from a list (pt 2)
-# Sometimes, you don't know what is in the list, but you know
-# you want to get rid of something at a specefic index
-food_list.pop(0)
-print(food_list)
-
-# Finding things in a lists
+# Finding things in a list
 print(food_list.index("chicken"))
 # This printed 9 for me, so chicken must be at index 9.
 # This is an easy way of finding things in a list.
@@ -228,25 +221,12 @@ print(food_list.index("chicken"))
 # Things I notice people do:
 # Some people have made lists with parentheses instead of brackets
 brands = ("apple", "samsung", "HTC")
-# This is a Tuple, not a list. Tuples are immutable (cannont be changed)
+# This is a TUPLE, not a list. Tuples are immutable (cannot be changed)
 
 # Changing things into a list
 string1 = "turquoise"
 list1 = list(string1)
-print (list1)
+print(list1)
 
-# Hangman hints
-for i in range (len(list1)):   # i goes through all indices
-    if list1[i] == "u":  # if we find a "U"
-        list1.pop(i)   # Remove the i-th index
-        list1.insert(i,"*")  # Put a * there instead
-
-# Changing back into a string (list-string)
-print("".join(list1))
-
-# Function Notes
-# a**2 + b**2 = c**2
-def pythagorean(a, b):
-    return (a**2 + b**2) ** (1/2)
-
-print(pythagorean(3, 4))
+# Changing back into a string (list→string)
+print("!".join(list1))
