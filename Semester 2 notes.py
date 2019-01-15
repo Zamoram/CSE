@@ -16,4 +16,8 @@ colors.append("cyan")
 colors.pop(0)
 print(colors)
 
-
+import string
+print(list(string.ascii_letters))
+print(string.digits)
+print(string.punctuation)
+print(string.printable)
