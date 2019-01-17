@@ -236,9 +236,9 @@ list1 = list(string1)
 print (list1)
 
 # Hangman hints
-for i in range (len(list1)):   # i goes through all indices
+   # i goes through all indices
     if list1[i] == "u":  # if we find a "U"
-        list1.pop(i)   # Remove the i-th index
+        list1.pop(i)   # for i in range (len(list1)):Remove the i-th index
         list1.insert(i,"*")  # Put a * there instead
 
 # Changing back into a string (list-string)
