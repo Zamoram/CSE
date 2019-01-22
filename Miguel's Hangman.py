@@ -1,12 +1,27 @@
 import random
-import string
-list1 = ["computer", "table", "monitor", "python", "rhythm", "gypsy", "myth", "microwave", "class", "teacher"]
 
-word = random.choice(list1)
+word_bank = ["computer", "table", "monitor", "python", "rhythm", "gypsy", "myth", "microwave", "class", "teacher"]
+word = random.choice(word_bank)
+word = 'pizza'
 print(word)
-
-input = random.choice(list1)
-
-print(list(string.ascii_letters))
 lives = 8
-guesses =("guess letter")
+letters_guessed = []
+while lives > 0:
+    # Show the hidden word
+    output = []
+    for letter in word:
+        if letter in letters_guessed:
+            output.append(letter)
+        else:
+            output.append("*")
+    print(output)
+
+    # Take in a guess
+    letter_guessed = input("Type in a letter: ")
+    letters_guessed.append(letter_guessed)
+
+
+    lives -= 1
+
+
+
