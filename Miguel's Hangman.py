@@ -2,8 +2,6 @@ import random
 
 word_bank = ["computer", "table", "monitor", "python", "rhythm", "gypsy", "myth", "microwave", "class", "teacher"]
 word = random.choice(word_bank)
-word = 'pizza'
-print(word)
 lives = 8
 letters_guessed = []
 while lives > 0:
