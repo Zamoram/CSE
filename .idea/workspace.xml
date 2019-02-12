@@ -43,7 +43,7 @@
     <session id="-1737118825">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -57,6 +57,7 @@
           <entry key="project.open.time.39" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.50" value="2" />
           <entry key="project.open.time.52" value="2" />
@@ -65,30 +66,30 @@
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.60" value="1" />
           <entry key="project.open.time.63" value="1" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="28" />
+          <entry key="py" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="20" />
+          <entry key="Python" value="21" />
           <entry key="Scratch" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="68" />
-          <entry key="py" value="7214" />
+          <entry key="py" value="8335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="68" />
-          <entry key="Python" value="7212" />
+          <entry key="Python" value="8333" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -96,15 +97,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/Miguel ZamoraLucky 7's.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Basic Python Notes.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,11 +152,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dictionary World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="475">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Object Notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+              <folding>
+                <marker date="1550011034979" expanded="true" signature="21:26" ph="..." />
+                <marker date="1550011034979" expanded="true" signature="424:433" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -230,6 +235,7 @@
         <option value="$PROJECT_DIR$/World Map.py" />
         <option value="$PROJECT_DIR$/Dictionaary World Map.py" />
         <option value="$PROJECT_DIR$/Dictionary World Map.py" />
+        <option value="$PROJECT_DIR$/Object Notes.py" />
       </list>
     </option>
   </component>
@@ -250,6 +256,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,7 +282,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,10 +446,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19591528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19894099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -621,8 +627,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="475">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+          <folding>
+            <marker date="1550011034979" expanded="true" signature="21:26" ph="..." />
+            <marker date="1550011034979" expanded="true" signature="424:433" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

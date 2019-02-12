@@ -26,7 +26,7 @@ world_map = {
         'Name': "Place to sleep",
         'Description': "This is where you sleep and do your homework and where you play video games.",
         'Paths': {
-            
+
         }
     }
 
