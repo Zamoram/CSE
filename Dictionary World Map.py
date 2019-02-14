@@ -1,6 +1,6 @@
 world_map = {
     'Living Room': {
-        'Name': "Miguels Living Room",
+        'Name': "Living Room",
         'Description': "This is where you live and start.",
         'Paths': {
             'North': "Outside",
@@ -32,3 +32,20 @@ world_map = {
 
 
 }
+directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
+current_node = world_map["Living Room"]  # This is your current location
+playing = True
+
+print(current_node['NAME'])
+command = input(">_")
+if command in ['q', 'quit', 'exit']:
+    playing = False
+elif command in directions:
+    try:
+        room_name = current_node["PATHS"][command]
+        current_node = world_map[room_name]
+    except KeyError:
+        print("I can't go that way.")
+
+else:
+    print("Command not recognized.")

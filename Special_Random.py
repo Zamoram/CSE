@@ -1,8 +1,7 @@
 import random
 
 class RandomWiebe:
-
+    @staticmethod
     def special_random():
-        @staticmethod
         return random.randint(1, 100)
 

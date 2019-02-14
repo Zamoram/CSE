@@ -57,4 +57,4 @@ my_computer.charge(20)
 
 your_computer.charge(20)
 your_computer.battery_left
-print(Special.Random.RandomWiebe.special_random())
+print(Special_Random.RandomWiebe.special_random())
