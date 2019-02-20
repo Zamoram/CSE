@@ -22,13 +22,22 @@ world_map = {
             'South': "Living Room"
         }
     },
-    'Bed_Room': {
+    'Bed_Room1': {
         'Name': "Place to sleep",
         'Description': "This is where you sleep and do your homework and where you play video games.",
         'Paths': {
-
+            'North': "Restroom",
+            'West': "Dining Room"
         }
-    }
+    },
+    'Restroom': {
+        'Name': "A place you do your buisness",
+        'Description': "This is where you go to relieve yourself.",
+        'Paths': {
+            'South': "Bed_Room1"
+        }
+    },
+
 
 
 }
