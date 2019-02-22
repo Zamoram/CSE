@@ -33,4 +33,4 @@ class Car(object):
         print("Stomp on the pedal, lets go faster")
         print("Alright but we're running out of gas.")
 
-my_Vehicle =
+my_Vehicle = Car

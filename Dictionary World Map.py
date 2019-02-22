@@ -37,7 +37,17 @@ world_map = {
             'South': "Bed_Room1"
         }
     },
-
+    'Bed_Room2': {
+        'Name': "The Sleeper",
+        'Description': "This is where you go to sleep",
+        'Paths': {
+            'East': "Dining_Room",
+            'South': "Hallway"
+        }
+    },
+    'Kitchen': {
+        'Name': ""
+    }
 
 
 }
