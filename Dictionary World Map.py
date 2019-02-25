@@ -12,7 +12,9 @@ world_map = {
         'Description': "This is where you eat",
         'Paths': {
             'East': "Bed_Room",
-            'South': " Kitchen"
+            'South': "Kitchen",
+            'North': "Living Room",
+            'West': "Bed_Room2"
         }
     },
     'Outside': {
@@ -46,9 +48,19 @@ world_map = {
         }
     },
     'Kitchen': {
-        'Name': ""
-    }
+        'Name': "The Eater",
+        'Description': "This is where you cook food",
+        'Paths': {
+            'North': "Dining_Room",
+            'South': "Laundry Room",
+            'West': "Hallway"
+        }
+    },
+    'Hallway': {
+        'Name': "The intersection",
+        'Description': ""
 
+    }
 
 }
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
