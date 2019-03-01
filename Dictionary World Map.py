@@ -58,10 +58,33 @@ world_map = {
     },
     'Hallway': {
         'Name': "The intersection",
-        'Description': ""
+        'Description': "This leads to many routes.",
+        'Paths': {
+            'North': "BedRoom2",
+            'East': "Kitchen",
+            'South': "BedRoom3",
+            'West': "BathRoom"
+        }
 
+    },
+    'BathRoom': {
+        'Name': "The pooper",
+        'Description': "Another room to take care of your business",
+        'Paths': {
+            'East': "Hallway"
+
+        }
+    },
+    'BedRoom3': {
+        'Name': "The guest bedroom",
+        'Description': "This is where your guests can go to sleep when you have visitors over",
+        'Paths': {
+            'North': "Hallway"
+        }
+    },
+    'LandryRoom': {
+        'Name'
     }
-
 }
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 current_node = world_map["Living Room"]  # This is your current location
