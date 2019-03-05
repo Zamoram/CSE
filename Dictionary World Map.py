@@ -83,8 +83,26 @@ world_map = {
         }
     },
     'LandryRoom': {
-        'Name'
-    }
+        'Name': "The washing room",
+        'Description': "This is where you go to wash your clothes.",
+        'Paths': {
+            'North': "Kitchen"
+        }
+    },
+    'Restroom1': {
+        'Name': "The buisness taker",
+        'Description': "This is the first bathroom built in the house",
+        'Paths': {
+            'South': "BedRoom1"
+        }
+    },
+    'Garage': {
+        'Name': "The car storer",
+        'Description': "This is where you park your cars",
+        'Paths': {
+            'East': "Outside"
+        }
+    },
 }
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 current_node = world_map["Living Room"]  # This is your current location
