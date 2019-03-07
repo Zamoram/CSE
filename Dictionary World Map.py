@@ -103,6 +103,20 @@ world_map = {
             'East': "Outside"
         }
     },
+    'NeighborsHouse': {
+        'Name': "The Neigbor",
+        'Description': "This is where your neighbor lives",
+        'Paths': {
+            'South': "Outside"
+        }
+    },
+    'ElementarySchool': {
+        'Name': "Jackson",
+        'Description': "This is you went to school",
+        'Paths': {
+            'West': "Outside"
+        }
+    }
 }
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 current_node = world_map["Living Room"]  # This is your current location
