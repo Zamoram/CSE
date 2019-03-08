@@ -3,4 +3,6 @@ class Item (object):
         self.name = name
 
 
-class
+class Cleaning_supplies(Item):
+    def __init__ (self, name):
+        super(Cleaning_supplies, self)
