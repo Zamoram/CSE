@@ -11,7 +11,7 @@ world_map = {
         'Name': "Eating Area",
         'Description': "This is where you eat",
         'Paths': {
-            'East': "Bed_Room",
+            'East': "Bed_Room1",
             'South': "Kitchen",
             'North': "Living Room",
             'West': "Bed_Room2"
@@ -60,7 +60,7 @@ world_map = {
         'Name': "The intersection",
         'Description': "This leads to many routes.",
         'Paths': {
-            'North': "BedRoom2",
+            'North': "Bed_Room2",
             'East': "Kitchen",
             'South': "BedRoom3",
             'West': "BathRoom"
@@ -93,7 +93,7 @@ world_map = {
         'Name': "The buisness taker",
         'Description': "This is the first bathroom built in the house",
         'Paths': {
-            'South': "BedRoom1"
+            'South': "Bed_Room1"
         }
     },
     'Garage': {
