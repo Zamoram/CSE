@@ -39,6 +39,7 @@ kitchen = Room("The Eater", None, None, None, None, "This is where you cook food
 bedroom1 = Room("Place to sleep", None, None, None, None, "This is where you sleep and do your homework and where you play video games.")
 restroom = Room("A place you do your buisness", None, None, None, None, "This is where you go to relieve yourself.")
 bedroom2 = Room("The Sleeper", None, None, None, None, "This is where you go to sleep")
+hallway = Room("The intersection", None, None, None, None)
 
 # Fixes
 living_room.north = outside
@@ -56,6 +57,10 @@ bedroom1.west = dining_room
 restroom.south = bedroom1
 bedroom2.south = hallway
 bedroom2.east = dining_room
+hallway.north = bedroom2
+hallway.south = bedroom3
+hallway.east = kitchen
+hallway =
 
 player = Player(living_room)
 
