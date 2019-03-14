@@ -6,7 +6,7 @@ class Item (object):
 class Weapon(Item):
     def __init__ (self, name, tool):
         super(Weapon, self).__init__(name)
-        self.tool = True
+        self.damage = True
 
 
 class Knife(Weapon):
@@ -15,15 +15,39 @@ class Knife(Weapon):
         self.stab = True
 
 
-class M17(Weapon):
+class M16(Weapon):
     def __init__(self, name):
-        super(M17, self).__init__(name)
-        self.shoot = True
+        super(M16, self).__init__(name)
+        self.shoot = -125
 
 
-class Scar(Weapon):
-    def __init__(self,name):
-        super(Scar, self)
+class Sword(Weapon):
+    def __init__(self, name):
+        super(Sword, self).__init__(name)
+        self.slash = -100
+
+class Shotgun(Weapon):
+    def __init__(self, name):
+        super(Shotgun, self).__init__(name)
+        self.blast = -150
+
+
+class Grenades(Weapon):
+    def __init__(self, name):
+        super(Grenades, self).__init__(name)
+        self.explosive = - 175
+
+class Vehicle(Item):
+    def __init__(self, name):
+        super(Vehicle, self).__init__(name)
+        self.drive = True
+
+
+class Toyota(Vehicle):
+    def __init__(self, name):
+        super(Toyota, self).__init__(name)
+        
+
 
 class Armor(Item):
     def __init__(self, name, armor_amt):

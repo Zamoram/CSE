@@ -48,7 +48,7 @@
     <session id="-1737118825">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="42" />
+          <entry key="project.closed" value="43" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.109" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -79,7 +79,8 @@
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.64" value="1" />
-          <entry key="project.opened" value="46" />
+          <entry key="project.open.time.78" value="1" />
+          <entry key="project.opened" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,13 +97,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="96" />
-          <entry key="py" value="18079" />
+          <entry key="py" value="18558" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="96" />
-          <entry key="Python" value="18077" />
+          <entry key="Python" value="18556" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -166,13 +167,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+            <state relative-caret-position="223">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
               <folding>
-                <marker date="1552513156777" expanded="true" signature="20:25" ph="..." />
-                <marker date="1552513156777" expanded="true" signature="97:102" ph="..." />
-                <marker date="1552513156777" expanded="true" signature="654:657" ph="..." />
-                <marker date="1552513156777" expanded="true" signature="681:1706" ph="..." />
+                <marker date="1552599331091" expanded="true" signature="20:25" ph="..." />
+                <marker date="1552599331091" expanded="true" signature="97:102" ph="..." />
+                <marker date="1552599331091" expanded="true" signature="712:1048" ph="..." />
+                <marker date="1552599331091" expanded="true" signature="1186:1189" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,7 +182,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Miguel's Dictionary World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="1972">
               <caret line="116" column="29" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
             </state>
           </provider>
@@ -190,7 +191,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Miguel's World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
+            <state relative-caret-position="1054">
               <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <marker date="1552510010042" expanded="true" signature="47:52" ph="..." />
@@ -484,10 +485,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2375189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24130106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -680,6 +681,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Miguel's Dictionary World Map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="116" column="29" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Miguel's World Map OOP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+          <folding>
+            <marker date="1552510010042" expanded="true" signature="47:52" ph="..." />
+            <marker date="1552510010042" expanded="true" signature="512:517" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notes/PythonChallenges.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -705,33 +724,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Miguel's Dictionary World Map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="116" column="29" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Miguel's World Map OOP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <marker date="1552510010042" expanded="true" signature="47:52" ph="..." />
-            <marker date="1552510010042" expanded="true" signature="512:517" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+        <state relative-caret-position="223">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
           <folding>
-            <marker date="1552513156777" expanded="true" signature="20:25" ph="..." />
-            <marker date="1552513156777" expanded="true" signature="97:102" ph="..." />
-            <marker date="1552513156777" expanded="true" signature="654:657" ph="..." />
-            <marker date="1552513156777" expanded="true" signature="681:1706" ph="..." />
+            <marker date="1552599331091" expanded="true" signature="20:25" ph="..." />
+            <marker date="1552599331091" expanded="true" signature="97:102" ph="..." />
+            <marker date="1552599331091" expanded="true" signature="712:1048" ph="..." />
+            <marker date="1552599331091" expanded="true" signature="1186:1189" ph="..." />
           </folding>
         </state>
       </provider>
