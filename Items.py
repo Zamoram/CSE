@@ -35,7 +35,7 @@ class Shotgun(Weapon):
 class Grenades(Weapon):
     def __init__(self, name):
         super(Grenades, self).__init__(name)
-        self.explosive = - 175
+        self.explosive = -175
 
 class Vehicle(Item):
     def __init__(self, name):
@@ -46,8 +46,37 @@ class Vehicle(Item):
 class Toyota(Vehicle):
     def __init__(self, name):
         super(Toyota, self).__init__(name)
-        
+        self.miles_per_hour = 60
 
+
+class Lamborghini(Vehicle):
+    def __init__(self, name):
+        super(Lamborghini, self).__init__(name)
+        self.speed = 200
+
+
+class Acura(Vehicle):
+    def __init__(self, name):
+        super(Acura, self).__init__(name)
+        self.speed = 125
+
+
+class Consumables(Item):
+    def __init__(self, name):
+        super(Consumables, self).__init__(name)
+        self.heal = True
+
+
+class Bandages(Consumables):
+    def __init__(self, name):
+        super(Bandages, self).__init__(name)
+        self.health = 30
+
+
+class Med_Kit(Consumables):
+    def __init__(self, name):
+        super(Med_Kit, self).__init__(name)
+        self.gain_health
 
 class Armor(Item):
     def __init__(self, name, armor_amt):
@@ -66,7 +95,7 @@ class Character(object):
         if damage < self.armor.armor_amt:
             print("No damage is done because of some Fabulous armor!")
         else:
-            self. health -= damage - self.armor.
+            self. health -= damage - self.armor.armor_amt
             if self.health < 0:
                 self.health = 0
                 print("%s has fallen" % self.name)
