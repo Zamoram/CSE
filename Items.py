@@ -70,13 +70,14 @@ class Consumables(Item):
 class Bandages(Consumables):
     def __init__(self, name):
         super(Bandages, self).__init__(name)
-        self.health = 30
+        self.health = +30
 
 
 class Med_Kit(Consumables):
     def __init__(self, name):
         super(Med_Kit, self).__init__(name)
-        self.gain_health
+        self.gain_health = +75
+
 
 class Armor(Item):
     def __init__(self, name, armor_amt):
@@ -107,13 +108,13 @@ class Character(object):
 
 
 # Items
-sword = Weapon("Sword", 10)
-canoe = Weapon("Canoe", 84)
+sword = Weapon("Sword", 45)
+Knife = Weapon("Knife", 85)
 wiebe_armor = Armor("Armor of the Teachers", 100)
 
 # Characters
 orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
-wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
+wiebe = Character("Wiebe", 100, Knife, wiebe_armor)
 
 orc.attack(wiebe)
 wiebe.attack(orc)

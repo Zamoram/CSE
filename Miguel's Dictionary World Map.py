@@ -21,7 +21,10 @@ world_map = {
         'Name': "Outside of the house",
         'Description': "You are outside of the house and you can not go any farther and you must go back.",
         'Paths': {
-            'South': "Living Room"
+            'North': "Neighborshouse",
+            'South': "Living Room",
+            'East': "Elementaryschool",
+            'West': "Garage"
         }
     },
     'Bed_Room1': {
@@ -112,7 +115,7 @@ world_map = {
     },
     'ElementarySchool': {
         'Name': "Jackson",
-        'Description': "This is you went to school",
+        'Description': "This is where you went to school",
         'Paths': {
             'West': "Outside"
         }

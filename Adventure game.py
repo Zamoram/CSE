@@ -1,15 +1,39 @@
 class Room(object):
     # This is a constructor
-    def __init__(self, name, north=None, south=None, east=None, west=None, description=""):
+    def __init__(self, name="", north=None, south=None, east=None, west=None, description=""):
         self.name = name
         self.north = north
         self.south = south
         self.east = east
         self.west = west
         self.description = description
+class Player(object):
+    def __init__(self, starting_location):
+        self.health = 100
+        self.inventory = []
+        self.current_location = starting_location
+
+    def move(self, new_location):
+        """This method moves a player to a new location
+
+        :param new_location: The room object that we move to
+        """
+        self.current_location = new_location
+
+    def find_room(self, direction):
+        """ This ,method takes a direction, and finds the variable of the room.
+
+        :param direction: A String (all lowercase), with a cardinal direction
+        :return: A room object if it exists, None if it does not
+        """
+        return getattr(self.current_location, direction)
+
+# These are the instances of the rooms (Instantiation)
+
+# Option 1 - Use the variables, but fix later
 living_room = Room("Living Room", None, None, None, None, "This is where you live and start.")
 dining_room = Room("Eating Area", None, None, None, None, "This is where you eat.")
-outside = Room("Outside of the house",None, None, None, None,"You are outside of the house and you can not go any farther and you must go back.")
+outside = Room("Outside of the house",None, None, None, None, "You are outside of the house and you can not go any farther and you must go back.")
 kitchen = Room("The Eater", None, None, None, None, "This is where you cook food")
 bedroom1 = Room("Place to sleep", None, None, None, None, "This is where you sleep and do your homework and where you play video games.")
 restroom = Room("A place you do your buisness", None, None, None, None, "This is where you go to relieve yourself.")
@@ -19,6 +43,10 @@ laundryroom = Room("The washing room", None, None, None, None, "This is where yo
 bedroom3 = Room("The guest bedroom", None, None, None, None, "This is where your guests can go to sleep when you have visitors over.")
 bathroom = Room("The pooper", None, None, None, None, "Another room to take care of your buisness.")
 restroom1 = Room("The buisness taker", None, None, None, None, "This is the first bathroom built in the house.")
+garage = Room("The car storer", None, None, None, None, "This is where you park your cars.")
+neighborshouse = Room("The Neighbor.", None, None, None, None, "This is where your neighbor lives.")
+elementaryschool = Room("Jackson", None, None, None, None, "This is where you went to school.")
+
 
 # Fixes
 living_room.north = outside
@@ -27,7 +55,10 @@ dining_room.north = living_room
 dining_room.south = kitchen
 dining_room.east = bedroom1
 dining_room.west = bedroom2
+outside.north = neighborshouse
 outside.south = living_room
+outside.east = elementaryschool
+outside.west = garage
 kitchen.north = dining_room
 kitchen.south = laundryroom
 kitchen.west = hallway
@@ -44,6 +75,10 @@ laundryroom.north = kitchen
 bedroom3.north = hallway
 bathroom.east = hallway
 restroom1.south = bedroom1
+garage.east = outside
+neighborshouse.south = outside
+elementaryschool.west = outside
+
 
 
 class Item (object):
@@ -139,7 +174,7 @@ class Character(object):
         self.weapon = weapon
         self.armor = armor
 
-    def take_change(self, damage):
+    def take_damage(self, damage):
         if damage < self.armor.armor_amt:
             print("No damage is done because of some Fabulous armor!")
         else:
@@ -190,7 +225,11 @@ world_map = {
         'Name': "Outside of the house",
         'Description': "You are outside of the house and you can not go any farther and you must go back.",
         'Paths': {
-            'South': "Living Room"
+            'North': "Neighborshouse",
+            'South': "Living Room",
+            'East': "Elementaryschool",
+            'West': "Garage"
+
         }
     },
     'Bed_Room1': {
@@ -291,7 +330,7 @@ directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 current_node = world_map["Living Room"]  # This is your current location
 playing = True
 
-print(current_node['NAME'])
+print(current_node['Room'])
 command = input(">_")
 if command in ['q', 'quit', 'exit']:
     playing = False

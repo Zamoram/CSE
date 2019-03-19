@@ -44,6 +44,10 @@ laundryroom = Room("The washing room", None, None, None, None, "This is where yo
 bedroom3 = Room("The guest bedroom", None, None, None, None, "This is where your guests can go to sleep when you have visitors over.")
 bathroom = Room("The pooper", None, None, None, None, "Another room to take care of your buisness.")
 restroom1 = Room("The buisness taker", None, None, None, None, "This is the first bathroom built in the house.")
+garage = Room("The car storer", None, None, None, None, "This is where you park your cars.")
+neighborshouse = ("The Neighbor.", None, None, None, None, "This is where you park your cars.")
+elementaryschool = ("Jackson", None, None, None, None, "This is where you went to school.")
+
 
 # Fixes
 living_room.north = outside
@@ -69,6 +73,9 @@ laundryroom.north = kitchen
 bedroom3.north = hallway
 bathroom.east = hallway
 restroom1.south = bedroom1
+garage.east = outside
+neighborshouse.south = outside
+elementaryschool.west = outside
 
 player = Player(living_room)
 
