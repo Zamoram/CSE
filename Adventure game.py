@@ -312,7 +312,7 @@ world_map = {
         }
     },
     'NeighborsHouse': {
-        'Name': "The Neigbor",
+        'Name': "The Neighbor",
         'Description': "This is where your neighbor lives",
         'Paths': {
             'South': "Outside"
@@ -326,20 +326,24 @@ world_map = {
         }
     }
 }
+# Other variables
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 current_node = world_map["Living Room"]  # This is your current location
 playing = True
 
-print(current_node['Room'])
-command = input(">_")
-if command in ['q', 'quit', 'exit']:
-    playing = False
-elif command in directions:
-    try:
-        room_name = current_node["PATHS"][command]
-        current_node = world_map[room_name]
-    except KeyError:
-        print("I can't go that way.")
+# Controller
+while playing:
+    print(current_node['Room'])
 
-else:
-    print("Command not recognized.")
+    command = input(">_")
+    if command.lower() in ['q', 'quit', 'exit']:
+        playing = False
+    elif command in directions:
+        try:
+            room_name = current_node["PATHS"][command]
+            current_node = world_map[room_name]
+        except KeyError:
+            print("I can't go that way.")
+
+    else:
+        print("Command not recognized.")
