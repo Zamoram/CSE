@@ -334,7 +334,6 @@ playing = True
 # Controller
 while playing:
     print(current_node['Room'])
-
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False

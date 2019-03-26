@@ -49,6 +49,7 @@ class Toyota(Vehicle):
         self.miles_per_hour = 60
 
 
+
 class Lamborghini(Vehicle):
     def __init__(self, name):
         super(Lamborghini, self).__init__(name)
@@ -59,6 +60,12 @@ class Acura(Vehicle):
     def __init__(self, name):
         super(Acura, self).__init__(name)
         self.speed = 125
+
+
+class F_16_Fighing_Falcon(Vehicle):
+    def __init__(self,name):
+        super(F_16_Fighing_Falcon, self).__init__(name)
+        self.speed = 1,500
 
 
 class Consumables(Item):
@@ -79,11 +86,25 @@ class Med_Kit(Consumables):
         self.gain_health = +75
 
 
+class Steriods(Consumables):
+    def __init__(self, name):
+        super(Steriods, self).__init__(name)
+        self.stenght_gained = +40
+
+
+class Key(Consumables):
+    def __init__(self, name):
+        super(Steriods, self).__init
+
+
+
 class Armor(Item):
     def __init__(self, name, armor_amt):
         super(Armor, self).__init__(name)
         self.armor_amt = armor_amt
 
+
+class
 
 class Character(object):
     def __init__(self, name, health, weapon, armor):
