@@ -89,12 +89,13 @@ class Med_Kit(Consumables):
 class Steriods(Consumables):
     def __init__(self, name):
         super(Steriods, self).__init__(name)
-        self.stenght_gained = +40
+        self.stength_gained = +40
 
 
 class Key(Consumables):
     def __init__(self, name):
-        super(Steriods, self).__init
+        super(Key, self).__init__(name)
+        self.open_doors = True
 
 
 
