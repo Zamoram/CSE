@@ -37,6 +37,15 @@ class Grenades(Weapon):
         super(Grenades, self).__init__(name)
         self.explosive = -175
 
+
+class Mop(Weapon):
+    def __init__(self, name):
+        super(Mop, self).__init__(name)
+        self.swing = True
+        self.smack = -20
+
+
+
 class Vehicle(Item):
     def __init__(self, name):
         super(Vehicle, self).__init__(name)
@@ -62,9 +71,9 @@ class Acura(Vehicle):
         self.speed = 125
 
 
-class F_16_Fighing_Falcon(Vehicle):
+class F_16_Fighting_Falcon(Vehicle):
     def __init__(self,name):
-        super(F_16_Fighing_Falcon, self).__init__(name)
+        super(F_16_Fighting_Falcon, self).__init__(name)
         self.speed = 1,500
 
 
@@ -105,7 +114,6 @@ class Armor(Item):
         self.armor_amt = armor_amt
 
 
-class
 
 class Character(object):
     def __init__(self, name, health, weapon, armor):
