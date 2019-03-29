@@ -51,7 +51,7 @@
     <session id="-1737118825">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="52" />
+          <entry key="project.closed" value="53" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.109" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -73,7 +73,7 @@
           <entry key="project.open.time.47" value="2" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="2" />
-          <entry key="project.open.time.50" value="4" />
+          <entry key="project.open.time.50" value="5" />
           <entry key="project.open.time.52" value="6" />
           <entry key="project.open.time.53" value="2" />
           <entry key="project.open.time.55" value="1" />
@@ -85,30 +85,30 @@
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.78" value="1" />
-          <entry key="project.opened" value="56" />
+          <entry key="project.opened" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="46" />
+          <entry key="py" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="37" />
+          <entry key="Python" value="39" />
           <entry key="Scratch" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="96" />
-          <entry key="py" value="20830" />
+          <entry key="py" value="21109" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="96" />
-          <entry key="Python" value="20828" />
+          <entry key="Python" value="21107" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -116,31 +116,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Miguel's Making an Object.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-              <folding>
-                <marker date="1550872392954" expanded="true" signature="18:23" ph="..." />
-                <marker date="1550872392954" expanded="true" signature="751:755" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Special_Random.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-              <folding>
-                <marker date="1550181542841" expanded="true" signature="33:34" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Miguel's World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -157,8 +132,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Adventure game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="335" column="31" lean-forward="true" selection-start-line="335" selection-start-column="31" selection-end-line="335" selection-end-column="31" />
+            <state relative-caret-position="404">
+              <caret line="348" column="64" selection-start-line="348" selection-start-column="64" selection-end-line="348" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dictionary notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes/Basic Python Notes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="658">
+              <caret line="225" column="50" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -166,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1642">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="765">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <marker date="1553808600887" expanded="true" signature="20:25" ph="..." />
                 <marker date="1553808600887" expanded="true" signature="97:102" ph="..." />
@@ -279,8 +272,8 @@
         <option value="$PROJECT_DIR$/Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/Miguel's World Map OOP.py" />
         <option value="$PROJECT_DIR$/Miguel's Dictionary World Map.py" />
-        <option value="$PROJECT_DIR$/Adventure game.py" />
         <option value="$PROJECT_DIR$/Items.py" />
+        <option value="$PROJECT_DIR$/Adventure game.py" />
       </list>
     </option>
   </component>
@@ -494,12 +487,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27458397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27912253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.48772505" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48772505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -604,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Basic Python Notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3825">
-          <caret line="225" column="50" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Miguel Zamora- Fix it.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -634,13 +620,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_4.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dictionary notes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Object Notes.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -677,6 +656,23 @@
           <folding>
             <marker date="1553029501294" expanded="true" signature="47:52" ph="..." />
             <marker date="1553029501294" expanded="true" signature="512:517" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <marker date="1553808600887" expanded="true" signature="20:25" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="97:102" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="712:1217" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="838:963" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="1913:2289" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="2184:2289" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="2307:2312" ph="..." />
+            <marker date="1553808600887" expanded="true" signature="2425:2429" ph="..." />
           </folding>
         </state>
       </provider>
@@ -726,27 +722,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Items.py">
+    <entry file="file://$PROJECT_DIR$/Dictionary notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1642">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <marker date="1553808600887" expanded="true" signature="20:25" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="97:102" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="712:1217" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="838:963" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="1913:2289" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="2184:2289" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="2307:2312" ph="..." />
-            <marker date="1553808600887" expanded="true" signature="2425:2429" ph="..." />
-          </folding>
+        <state relative-caret-position="128">
+          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Basic Python Notes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="225" column="50" selection-start-line="225" selection-start-column="50" selection-end-line="225" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Adventure game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="335" column="31" lean-forward="true" selection-start-line="335" selection-start-column="31" selection-end-line="335" selection-end-column="31" />
+        <state relative-caret-position="404">
+          <caret line="348" column="64" selection-start-line="348" selection-start-column="64" selection-end-line="348" selection-end-column="64" />
         </state>
       </provider>
     </entry>

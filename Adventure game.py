@@ -338,6 +338,16 @@ while playing:
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:
+    elif "take" in command:
+        item_name = command[5:]
+        found_item = none
+        for item in player.current_location.items:
+            if item.name == item_name
+                found_item = item
+            if found_item is not name:
+                player.inventory.append(found_item)
+                player.current_location.items.remove(found_item)
+
         try:
             room_name = current_node["PATHS"][command]
             current_node = world_map[room_name]
@@ -346,3 +356,5 @@ while playing:
 
     else:
         print("Command not recognized.")
+found_item = none
+for item in player.current_location.items:
