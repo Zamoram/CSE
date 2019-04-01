@@ -167,6 +167,7 @@ class Armor(Item):
         self.armor_amt = armor_amt
 
 
+
 class Character(object):
     def __init__(self, name, health, weapon, armor):
         self.name = name
@@ -188,6 +189,10 @@ class Character(object):
         print("%s attacks %s for %d damage" %(self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
+class Player(Character):
+    def __init__(self, name, health, weapon, armor):
+        super(Player, self).__init__(name, health, weapon, armor)
+        self.inventory = []
 
 # Items
 sword = Weapon("Sword", 10)
@@ -326,12 +331,43 @@ world_map = {
         }
     }
 }
+while playing:
+    print(player.current_location.name)
+    print(player.current_location.description)
+
+    command = input(">_")
+    if command.lower() in ['q', 'quit', 'exit']:
+        playing = False
+    elif command in directions:
+        try:
+            next_room = player.find_room(command)
+            player.move(next_room)
+        except KeyError:
+            print("I can't go that way.")
+    else:
+        print("Command not recognized.")
+
 # Other variables
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 current_node = world_map["Living Room"]  # This is your current location
 playing = True
 
 # Controller
+while playing:
+    print(current_node['NAME'])
+
+    command = input(">_")
+    if command.lower() in ['q', 'quit', 'exit']:
+        playing = False
+    elif command in directions:
+        try:
+            room_name = current_node["PATHS"][command]
+            current_node = world_map[room_name]
+        except KeyError:
+            print("I can't go that way.")
+    else:
+        print("Command not recognized.")
+
 while playing:
     print(current_node['Room'])
     command = input(">_")
@@ -342,7 +378,7 @@ while playing:
         item_name = command[5:]
         found_item = none
         for item in player.current_location.items:
-            if item.name == item_name
+            if item.name == item_name:
                 found_item = item
             if found_item is not name:
                 player.inventory.append(found_item)
