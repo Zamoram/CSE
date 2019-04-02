@@ -109,6 +109,7 @@ class Sword(Weapon):
         super(Sword, self).__init__(name)
         self.slash = -100
 
+
 class Shotgun(Weapon):
     def __init__(self, name):
         super(Shotgun, self).__init__(name)
@@ -119,6 +120,7 @@ class Grenades(Weapon):
     def __init__(self, name):
         super(Grenades, self).__init__(name)
         self.explosive = -175
+
 
 class Vehicle(Item):
     def __init__(self, name):
@@ -161,11 +163,23 @@ class Med_Kit(Consumables):
         super(Med_Kit, self).__init__(name)
         self.gain_health
 
+
 class Armor(Item):
     def __init__(self, name, armor_amt):
         super(Armor, self).__init__(name)
         self.armor_amt = armor_amt
 
+
+class Scale_Armor(Armor):
+    def __init__(self, name):
+        super(Scale_Armor, self).__init__(name)
+        self.add_health =+ 100
+
+
+class Brigandine(Armor):
+    def __init__(self, name):
+        super(Brigandine, self).__init__(name)
+        self.health_added =+ 150
 
 
 class Character(object):
@@ -195,7 +209,10 @@ class Player(Character):
         self.inventory = []
 
 # Items
-sword = Weapon("Sword", 10)
+Knife = Weapon("Knife",)
+M16 = Weapon("M16", 38)
+sword = Weapon("Sword", 25)
+Shotgun = Weapon("Shotgun", 30)
 canoe = Weapon("Canoe", 84)
 wiebe_armor = Armor("Armor of the Teachers", 100)
 
