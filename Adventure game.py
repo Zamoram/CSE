@@ -96,30 +96,37 @@ class Knife(Weapon):
     def __init__(self, name):
         super(Knife, self).__init__(name)
         self.stab = True
+        self.shank = 21
 
 
 class M16(Weapon):
     def __init__(self, name):
         super(M16, self).__init__(name)
-        self.shoot = -125
+        self.shoot = -38
 
 
 class Sword(Weapon):
     def __init__(self, name):
         super(Sword, self).__init__(name)
-        self.slash = -100
+        self.slash = -22
 
 
 class Shotgun(Weapon):
     def __init__(self, name):
         super(Shotgun, self).__init__(name)
-        self.blast = -150
+        self.blast = -25
 
 
 class Grenades(Weapon):
     def __init__(self, name):
         super(Grenades, self).__init__(name)
-        self.explosive = -175
+        self.explosive = -30
+
+
+class Canoe(Weapon):
+    def __init__(self, name):
+        super(Canoe, self).__init__(name)
+        self.whack = -15
 
 
 class Vehicle(Item):
@@ -161,7 +168,7 @@ class Bandages(Consumables):
 class Med_Kit(Consumables):
     def __init__(self, name):
         super(Med_Kit, self).__init__(name)
-        self.gain_health
+        self.gain_health = 50
 
 
 class Armor(Item):
@@ -209,11 +216,15 @@ class Player(Character):
         self.inventory = []
 
 # Items
-Knife = Weapon("Knife",)
-M16 = Weapon("M16", 38)
-sword = Weapon("Sword", 25)
-Shotgun = Weapon("Shotgun", 30)
-canoe = Weapon("Canoe", 84)
+Knife = Weapon("Knife", -21)
+M16 = Weapon("M16", -38)
+sword = Weapon("Sword", -22)
+Shotgun = Weapon("Shotgun", -25)
+Grenades = Weapon("Grenades", -30)
+canoe = Weapon("Canoe", -15)
+Toyota = Vehicle("Toyota", 60)
+Lamborghini = Vehicle("Lamborghini", 200)
+Acura = Vehicle()
 wiebe_armor = Armor("Armor of the Teachers", 100)
 
 # Characters
