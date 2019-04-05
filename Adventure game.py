@@ -94,7 +94,7 @@ class Weapon(Item):
 
 class Knife(Weapon):
     def __init__(self, name):
-        super(Knife, self).__init__(name)
+        super(Knife, self).__init__("Boning Knife")
         self.stab = True
         self.shank = 21
 
@@ -216,15 +216,15 @@ class Player(Character):
         self.inventory = []
 
 # Items
-Knife = Weapon("Knife", -21)
-M16 = Weapon("M16", -38)
+knife = Weapon("Boning knife", -21)
+m16 = Weapon("M16", -38)
 sword = Weapon("Sword", -22)
-Shotgun = Weapon("Shotgun", -25)
-Grenades = Weapon("Grenades", -30)
+shotgun = Weapon("Shotgun", -25)
+grenades = Weapon("Grenades", -30)
 canoe = Weapon("Canoe", -15)
-Toyota = Vehicle("Toyota", 60)
-Lamborghini = Vehicle("Lamborghini", 200)
-Acura = Vehicle()
+toyota = Vehicle("Toyota", 60)
+lamborghini = Vehicle("Lamborghini", 200)
+acura = Vehicle("NSX", 125)
 wiebe_armor = Armor("Armor of the Teachers", 100)
 
 # Characters
