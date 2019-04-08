@@ -79,7 +79,28 @@ garage.east = outside
 neighborshouse.south = outside
 elementaryschool.west = outside
 
+player = Player(living_room)
 
+directions = ['north','south', 'east', 'west', 'up', 'down']
+playing = True
+
+# Controller
+while playing:
+    print(player.current_location.name)
+
+
+    command = input(">_")
+    if command in ['q', 'quit', 'exit']:
+        playing = False
+    elif command in directions:
+        try:
+            next_room = player.find_room(command)
+            player.move(next_room)
+        except KeyError:
+            print("I can't go that way.")
+
+    else:
+        print("Command not recognized.")
 
 class Item (object):
     def __init__(self, name):
@@ -210,7 +231,7 @@ class Character(object):
         print("%s attacks %s for %d damage" %(self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
-class Player(Character):
+class Player(object):
     def __init__(self, name, health, weapon, armor):
         super(Player, self).__init__(name, health, weapon, armor)
         self.inventory = []
@@ -359,6 +380,8 @@ world_map = {
         }
     }
 }
+
+player = player(living_room)
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
@@ -377,6 +400,7 @@ while playing:
 
 # Other variables
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
+short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 current_node = world_map["Living Room"]  # This is your current location
 playing = True
 
@@ -399,6 +423,11 @@ while playing:
 while playing:
     print(current_node['Room'])
     command = input(">_")
+
+    if command in short_directions:
+        pos = short_directions.index(command)
+        command = directions[pos]
+
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:
