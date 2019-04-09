@@ -26,7 +26,8 @@ class Player(object):
         :param direction: A String (all lowercase), with a cardinal direction
         :return: A room object if it exists, None if it does not
         """
-        return getattr(self.current_location, direction)
+        room_name = getattr(self.current_location, direction)
+        return globals()[room_name]
 
 # These are the instances of the rooms (Instantiation)
 
@@ -108,14 +109,14 @@ class Item (object):
 
 
 class Weapon(Item):
-    def __init__ (self, name, tool):
+    def __init__ (self, name):
         super(Weapon, self).__init__(name)
         self.damage = True
 
 
 class Knife(Weapon):
     def __init__(self, name):
-        super(Knife, self).__init__("Boning Knife")
+        super(Knife, self).__init__(name)
         self.stab = True
         self.shank = 21
 
@@ -186,9 +187,9 @@ class Bandages(Consumables):
         self.health = 30
 
 
-class Med_Kit(Consumables):
+class MedKit(Consumables):
     def __init__(self, name):
-        super(Med_Kit, self).__init__(name)
+        super(MedKit, self).__init__(name)
         self.gain_health = 50
 
 
@@ -198,9 +199,9 @@ class Armor(Item):
         self.armor_amt = armor_amt
 
 
-class Scale_Armor(Armor):
+class ScaleArmor(Armor):
     def __init__(self, name):
-        super(Scale_Armor, self).__init__(name)
+        super(ScaleArmor, self).__init__(name)
         self.add_health =+ 100
 
 
@@ -235,7 +236,24 @@ class Player(object):
     def __init__(self, name, health, weapon, armor):
         super(Player, self).__init__(name, health, weapon, armor)
         self.inventory = []
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor
 
+    def take_damage(self, damage):
+        if damage < self.armor.armor_amt:
+            print("No damage is done because of some Fabulous armor!")
+        else:
+            self.health -= damage - self.armor.armor_amt
+            if self.health < 0:
+                self.health = 0
+                print("%s has fallen" % self.name)
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
 # Items
 knife = Weapon("Boning knife", -21)
 m16 = Weapon("M16", -38)
@@ -404,6 +422,8 @@ short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 current_node = world_map["Living Room"]  # This is your current location
 playing = True
 
+
+
 # Controller
 while playing:
     print(current_node['NAME'])
@@ -431,13 +451,14 @@ while playing:
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:
+        pass
     elif "take" in command:
         item_name = command[5:]
-        found_item = none
+        found_item = None
         for item in player.current_location.items:
             if item.name == item_name:
                 found_item = item
-            if found_item is not name:
+            if found_item is not item_name:
                 player.inventory.append(found_item)
                 player.current_location.items.remove(found_item)
 
@@ -449,5 +470,5 @@ while playing:
 
     else:
         print("Command not recognized.")
-found_item = none
+found_item = None
 for item in player.current_location.items:

@@ -11,39 +11,39 @@ class Weapon(Item):
 
 class Knife(Weapon):
     def __init__(self, name):
-        super(Knife, self).__init__(name)
+        super(Knife, self).__init__("Boning Knife")
         self.stab = True
+        self.shank = 21
 
 
 class M16(Weapon):
     def __init__(self, name):
         super(M16, self).__init__(name)
-        self.shoot = -125
+        self.shoot = -38
 
 
 class Sword(Weapon):
     def __init__(self, name):
         super(Sword, self).__init__(name)
-        self.slash = -100
+        self.slash = -22
+
 
 class Shotgun(Weapon):
     def __init__(self, name):
         super(Shotgun, self).__init__(name)
-        self.blast = -150
+        self.blast = -25
 
 
 class Grenades(Weapon):
     def __init__(self, name):
         super(Grenades, self).__init__(name)
-        self.explosive = -175
+        self.explosive = -30
 
 
-class Mop(Weapon):
+class Canoe(Weapon):
     def __init__(self, name):
-        super(Mop, self).__init__(name)
-        self.swing = True
-        self.smack = -20
-
+        super(Canoe, self).__init__(name)
+        self.whack = -15
 
 
 class Vehicle(Item):
@@ -58,7 +58,6 @@ class Toyota(Vehicle):
         self.miles_per_hour = 60
 
 
-
 class Lamborghini(Vehicle):
     def __init__(self, name):
         super(Lamborghini, self).__init__(name)
@@ -71,12 +70,6 @@ class Acura(Vehicle):
         self.speed = 125
 
 
-class F_16_Fighting_Falcon(Vehicle):
-    def __init__(self,name):
-        super(F_16_Fighting_Falcon, self).__init__(name)
-        self.speed = 1,500
-
-
 class Consumables(Item):
     def __init__(self, name):
         super(Consumables, self).__init__(name)
@@ -86,26 +79,13 @@ class Consumables(Item):
 class Bandages(Consumables):
     def __init__(self, name):
         super(Bandages, self).__init__(name)
-        self.health = +30
+        self.health = 30
 
 
 class Med_Kit(Consumables):
     def __init__(self, name):
         super(Med_Kit, self).__init__(name)
-        self.gain_health = +75
-
-
-class Steriods(Consumables):
-    def __init__(self, name):
-        super(Steriods, self).__init__(name)
-        self.stength_gained = +40
-
-
-class Key(Consumables):
-    def __init__(self, name):
-        super(Key, self).__init__(name)
-        self.open_doors = True
-
+        self.gain_health = 50
 
 
 class Armor(Item):
@@ -113,6 +93,17 @@ class Armor(Item):
         super(Armor, self).__init__(name)
         self.armor_amt = armor_amt
 
+
+class Scale_Armor(Armor):
+    def __init__(self, name):
+        super(Scale_Armor, self).__init__(name)
+        self.add_health =+ 100
+
+
+class Brigandine(Armor):
+    def __init__(self, name):
+        super(Brigandine, self).__init__(name)
+        self.health_added =+ 150
 
 
 class Character(object):
@@ -122,7 +113,7 @@ class Character(object):
         self.weapon = weapon
         self.armor = armor
 
-    def take_change(self, damage):
+    def take_damage(self, damage):
         if damage < self.armor.armor_amt:
             print("No damage is done because of some Fabulous armor!")
         else:
@@ -136,15 +127,26 @@ class Character(object):
         print("%s attacks %s for %d damage" %(self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
+class Player(object):
+    def __init__(self, name, health, weapon, armor):
+        super(Player, self).__init__(name, health, weapon, armor)
+        self.inventory = []
 
 # Items
-sword = Weapon("Sword", 45)
-Knife = Weapon("Knife", 85)
+knife = Weapon("Boning knife", -21)
+m16 = Weapon("M16", -38)
+sword = Weapon("Sword", -22)
+shotgun = Weapon("Shotgun", -25)
+grenades = Weapon("Grenades", -30)
+canoe = Weapon("Canoe", -15)
+toyota = Vehicle("Toyota", 60)
+lamborghini = Vehicle("Lamborghini", 200)
+acura = Vehicle("NSX", 125)
 wiebe_armor = Armor("Armor of the Teachers", 100)
 
 # Characters
 orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
-wiebe = Character("Wiebe", 100, Knife, wiebe_armor)
+wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
 
 orc.attack(wiebe)
 wiebe.attack(orc)
