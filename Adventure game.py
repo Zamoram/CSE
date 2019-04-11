@@ -7,11 +7,30 @@ class Room(object):
         self.east = east
         self.west = west
         self.description = description
+
+
 class Player(object):
-    def __init__(self, starting_location):
+    def __init__(self, name, starting_location, weapon, armor):
         self.health = 100
         self.inventory = []
         self.current_location = starting_location
+        self.weapon = weapon
+        self.armor = armor
+        self.name = name
+
+    def take_damage(self, damage):
+        if damage < self.armor.armor_amt:
+            print("No damage is done because of some Fabulous armor!")
+        else:
+            self.health -= damage - self.armor.armor_amt
+            if self.health < 0:
+                self.health = 0
+                print("%s has fallen" % self.name)
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
 
     def move(self, new_location):
         """This method moves a player to a new location
@@ -27,81 +46,8 @@ class Player(object):
         :return: A room object if it exists, None if it does not
         """
         room_name = getattr(self.current_location, direction)
-        return globals()[room_name]
+        return room_name
 
-# These are the instances of the rooms (Instantiation)
-
-# Option 1 - Use the variables, but fix later
-living_room = Room("Living Room", None, None, None, None, "This is where you live and start.")
-dining_room = Room("Eating Area", None, None, None, None, "This is where you eat.")
-outside = Room("Outside of the house",None, None, None, None, "You are outside of the house and you can not go any farther and you must go back.")
-kitchen = Room("The Eater", None, None, None, None, "This is where you cook food")
-bedroom1 = Room("Place to sleep", None, None, None, None, "This is where you sleep and do your homework and where you play video games.")
-restroom = Room("A place you do your buisness", None, None, None, None, "This is where you go to relieve yourself.")
-bedroom2 = Room("The Sleeper", None, None, None, None, "This is where you go to sleep")
-hallway = Room("The intersection", None, None, None, None, "This leads to many routes")
-laundryroom = Room("The washing room", None, None, None, None, "This is where you go to wash your clothes.")
-bedroom3 = Room("The guest bedroom", None, None, None, None, "This is where your guests can go to sleep when you have visitors over.")
-bathroom = Room("The pooper", None, None, None, None, "Another room to take care of your buisness.")
-restroom1 = Room("The buisness taker", None, None, None, None, "This is the first bathroom built in the house.")
-garage = Room("The car storer", None, None, None, None, "This is where you park your cars.")
-neighborshouse = Room("The Neighbor.", None, None, None, None, "This is where your neighbor lives.")
-elementaryschool = Room("Jackson", None, None, None, None, "This is where you went to school.")
-
-
-# Fixes
-living_room.north = outside
-living_room.south = dining_room
-dining_room.north = living_room
-dining_room.south = kitchen
-dining_room.east = bedroom1
-dining_room.west = bedroom2
-outside.north = neighborshouse
-outside.south = living_room
-outside.east = elementaryschool
-outside.west = garage
-kitchen.north = dining_room
-kitchen.south = laundryroom
-kitchen.west = hallway
-bedroom1.north = restroom
-bedroom1.west = dining_room
-restroom.south = bedroom1
-bedroom2.south = hallway
-bedroom2.east = dining_room
-hallway.north = bedroom2
-hallway.south = bedroom3
-hallway.east = kitchen
-hallway.west = bathroom
-laundryroom.north = kitchen
-bedroom3.north = hallway
-bathroom.east = hallway
-restroom1.south = bedroom1
-garage.east = outside
-neighborshouse.south = outside
-elementaryschool.west = outside
-
-player = Player(living_room)
-
-directions = ['north','south', 'east', 'west', 'up', 'down']
-playing = True
-
-# Controller
-while playing:
-    print(player.current_location.name)
-
-
-    command = input(">_")
-    if command in ['q', 'quit', 'exit']:
-        playing = False
-    elif command in directions:
-        try:
-            next_room = player.find_room(command)
-            player.move(next_room)
-        except KeyError:
-            print("I can't go that way.")
-
-    else:
-        print("Command not recognized.")
 
 class Item (object):
     def __init__(self, name):
@@ -109,45 +55,45 @@ class Item (object):
 
 
 class Weapon(Item):
-    def __init__ (self, name):
+    def __init__(self, name, damage):
         super(Weapon, self).__init__(name)
-        self.damage = True
+        self.damage = damage
 
 
 class Knife(Weapon):
     def __init__(self, name):
-        super(Knife, self).__init__(name)
+        super(Knife, self).__init__(name, 21)
         self.stab = True
         self.shank = 21
 
 
 class M16(Weapon):
     def __init__(self, name):
-        super(M16, self).__init__(name)
+        super(M16, self).__init__(name, 38)
         self.shoot = -38
 
 
 class Sword(Weapon):
     def __init__(self, name):
-        super(Sword, self).__init__(name)
+        super(Sword, self).__init__(name, 22)
         self.slash = -22
 
 
 class Shotgun(Weapon):
     def __init__(self, name):
-        super(Shotgun, self).__init__(name)
+        super(Shotgun, self).__init__(name, 25)
         self.blast = -25
 
 
 class Grenades(Weapon):
     def __init__(self, name):
-        super(Grenades, self).__init__(name)
+        super(Grenades, self).__init__(name, 30)
         self.explosive = -30
 
 
 class Canoe(Weapon):
     def __init__(self, name):
-        super(Canoe, self).__init__(name)
+        super(Canoe, self).__init__(name, 15)
         self.whack = -15
 
 
@@ -200,15 +146,15 @@ class Armor(Item):
 
 
 class ScaleArmor(Armor):
-    def __init__(self, name):
-        super(ScaleArmor, self).__init__(name)
-        self.add_health =+ 100
+    def __init__(self, name, armor_amt):
+        super(ScaleArmor, self).__init__(name, armor_amt)
+        self.add_health = 100
 
 
 class Brigandine(Armor):
-    def __init__(self, name):
-        super(Brigandine, self).__init__(name)
-        self.health_added =+ 150
+    def __init__(self, name, armor_amt):
+        super(Brigandine, self).__init__(name, armor_amt)
+        self.health_added = 150
 
 
 class Character(object):
@@ -229,13 +175,12 @@ class Character(object):
         print("%s has %d health left" % (self.name, self.health))
 
     def attack(self, target):
-        print("%s attacks %s for %d damage" %(self.name, target.name, self.weapon.damage))
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
-class Player(object):
+
+class Enemy(Character):
     def __init__(self, name, health, weapon, armor):
-        super(Player, self).__init__(name, health, weapon, armor)
-        self.inventory = []
         self.name = name
         self.health = health
         self.weapon = weapon
@@ -245,203 +190,98 @@ class Player(object):
         if damage < self.armor.armor_amt:
             print("No damage is done because of some Fabulous armor!")
         else:
-            self.health -= damage - self.armor.armor_amt
+            self. health -= damage - self.armor.armor_amt
             if self.health < 0:
                 self.health = 0
                 print("%s has fallen" % self.name)
         print("%s has %d health left" % (self.name, self.health))
 
     def attack(self, target):
-        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        print("%s attacks %s for %d damage" %(self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
+
+
 # Items
-knife = Weapon("Boning knife", -21)
-m16 = Weapon("M16", -38)
-sword = Weapon("Sword", -22)
-shotgun = Weapon("Shotgun", -25)
-grenades = Weapon("Grenades", -30)
-canoe = Weapon("Canoe", -15)
-toyota = Vehicle("Toyota", 60)
-lamborghini = Vehicle("Lamborghini", 200)
-acura = Vehicle("NSX", 125)
+knife = Knife("Boning knife")
+m16 = M16("M16")
+sword = Sword("Sword")
+shotgun = Shotgun("Shotgun")
+grenades = Grenades("Grenades")
+canoe = Canoe("Canoe")
+toyota = Vehicle("Toyota")
+lamborghini = Vehicle("Lamborghini")
+acura = Vehicle("NSX")
 wiebe_armor = Armor("Armor of the Teachers", 100)
 
 # Characters
 orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
 wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
+enemy = Character("Enemy", 150,)
 
-orc.attack(wiebe)
-wiebe.attack(orc)
-wiebe.attack(orc)
 
-world_map = {
-    'Living Room': {
-        'Name': "Living Room",
-        'Description': "This is where you live and start.",
-        'Paths': {
-            'North': "Outside",
-            'South': "Dining Room"
-        }
-    },
-    'Dining Room': {
-        'Name': "Eating Area",
-        'Description': "This is where you eat",
-        'Paths': {
-            'East': "Bed_Room1",
-            'South': "Kitchen",
-            'North': "Living Room",
-            'West': "Bed_Room2"
-        }
-    },
-    'Outside': {
-        'Name': "Outside of the house",
-        'Description': "You are outside of the house and you can not go any farther and you must go back.",
-        'Paths': {
-            'North': "Neighborshouse",
-            'South': "Living Room",
-            'East': "Elementaryschool",
-            'West': "Garage"
+# Option 1 - Use the variables,but fix later
+living_room = Room("Living Room", None, None, None, None, "This is where you live and start.")
+dining_room = Room("Eating Area", None, None, None, None, "This is where you eat.")
+outside = Room("Outside of the house", None, None, None, None,
+               "You are outside of the house and you can not go any farther and you must go back.")
+kitchen = Room("The Eater", None, None, None, None, "This is where you cook food")
+bedroom1 = Room("Place to sleep", None, None, None, None,
+                "This is where you sleep and do your homework and where you play video games.")
+restroom = Room("A place you do your business", None, None, None, None, "This is where you go to relieve yourself.")
+bedroom2 = Room("The Sleeper", None, None, None, None, "This is where you go to sleep")
+hallway = Room("The intersection", None, None, None, None, "This leads to many routes")
+laundry_room = Room("The washing room", None, None, None, None, "This is where you go to wash your clothes.")
+bedroom3 = Room("The guest bedroom", None, None, None, None,
+                "This is where your guests can go to sleep when you have visitors over.")
+bathroom = Room("The pooper", None, None, None, None, "Another room to take care of your business.")
+restroom1 = Room("The buisness taker", None, None, None, None, "This is the first bathroom built in the house.")
+garage = Room("The car storer", None, None, None, None, "This is where you park your cars.")
+neighbors_house = Room("The Neighbor.", None, None, None, None, "This is where your neighbor lives.")
+elementary_school = Room("Jackson", None, None, None, None, "This is where you went to school.")
 
-        }
-    },
-    'Bed_Room1': {
-        'Name': "Place to sleep",
-        'Description': "This is where you sleep and do your homework and where you play video games.",
-        'Paths': {
-            'North': "Restroom",
-            'West': "Dining Room"
-        }
-    },
-    'Restroom': {
-        'Name': "A place you do your buisness",
-        'Description': "This is where you go to relieve yourself.",
-        'Paths': {
-            'South': "Bed_Room1"
-        }
-    },
-    'Bed_Room2': {
-        'Name': "The Sleeper",
-        'Description': "This is where you go to sleep",
-        'Paths': {
-            'East': "Dining_Room",
-            'South': "Hallway"
-        }
-    },
-    'Kitchen': {
-        'Name': "The Eater",
-        'Description': "This is where you cook food",
-        'Paths': {
-            'North': "Dining_Room",
-            'South': "Laundry Room",
-            'West': "Hallway"
-        }
-    },
-    'Hallway': {
-        'Name': "The intersection",
-        'Description': "This leads to many routes.",
-        'Paths': {
-            'North': "Bed_Room2",
-            'East': "Kitchen",
-            'South': "BedRoom3",
-            'West': "BathRoom"
-        }
 
-    },
-    'BathRoom': {
-        'Name': "The pooper",
-        'Description': "Another room to take care of your business",
-        'Paths': {
-            'East': "Hallway"
+# Fixes
+living_room.north = outside
+living_room.south = dining_room
+dining_room.north = living_room
+dining_room.south = kitchen
+dining_room.east = bedroom1
+dining_room.west = bedroom2
+outside.north = neighbors_house
+outside.south = living_room
+outside.east = elementary_school
+outside.west = garage
+kitchen.north = dining_room
+kitchen.south = laundry_room
+kitchen.west = hallway
+bedroom1.north = restroom
+bedroom1.west = dining_room
+restroom.south = bedroom1
+bedroom2.south = hallway
+bedroom2.east = dining_room
+hallway.north = bedroom2
+hallway.south = bedroom3
+hallway.east = kitchen
+hallway.west = bathroom
+laundry_room.north = kitchen
+bedroom3.north = hallway
+bathroom.east = hallway
+restroom1.south = bedroom1
+garage.east = outside
+neighbors_house.south = outside
+elementary_school.west = outside
 
-        }
-    },
-    'BedRoom3': {
-        'Name': "The guest bedroom",
-        'Description': "This is where your guests can go to sleep when you have visitors over",
-        'Paths': {
-            'North': "Hallway"
-        }
-    },
-    'LandryRoom': {
-        'Name': "The washing room",
-        'Description': "This is where you go to wash your clothes.",
-        'Paths': {
-            'North': "Kitchen"
-        }
-    },
-    'Restroom1': {
-        'Name': "The buisness taker",
-        'Description': "This is the first bathroom built in the house",
-        'Paths': {
-            'South': "Bed_Room1"
-        }
-    },
-    'Garage': {
-        'Name': "The car storer",
-        'Description': "This is where you park your cars",
-        'Paths': {
-            'East': "Outside"
-        }
-    },
-    'NeighborsHouse': {
-        'Name': "The Neighbor",
-        'Description': "This is where your neighbor lives",
-        'Paths': {
-            'South': "Outside"
-        }
-    },
-    'ElementarySchool': {
-        'Name': "Jackson",
-        'Description': "This is you went to school",
-        'Paths': {
-            'West': "Outside"
-        }
-    }
-}
 
-player = player(living_room)
+directions = ['north', 'south', 'east', 'west']
+short_directions = ['n', 's', 'e', 'w']
+playing = True
+
+player = Player("person1", living_room, sword, wiebe_armor)
+
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
 
-    command = input(">_")
-    if command.lower() in ['q', 'quit', 'exit']:
-        playing = False
-    elif command in directions:
-        try:
-            next_room = player.find_room(command)
-            player.move(next_room)
-        except KeyError:
-            print("I can't go that way.")
-    else:
-        print("Command not recognized.")
-
-# Other variables
-directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
-short_directions = ['n', 's', 'e', 'w', 'u', 'd']
-current_node = world_map["Living Room"]  # This is your current location
-playing = True
-
-
-
-# Controller
-while playing:
-    print(current_node['NAME'])
-
-    command = input(">_")
-    if command.lower() in ['q', 'quit', 'exit']:
-        playing = False
-    elif command in directions:
-        try:
-            room_name = current_node["PATHS"][command]
-            current_node = world_map[room_name]
-        except KeyError:
-            print("I can't go that way.")
-    else:
-        print("Command not recognized.")
-
-while playing:
-    print(current_node['Room'])
     command = input(">_")
 
     if command in short_directions:
@@ -451,7 +291,13 @@ while playing:
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command in directions:
-        pass
+        try:
+            next_room = player.find_room(command)
+            if next_room is None:
+                raise KeyError
+            player.move(next_room)
+        except KeyError:
+            print("I can't go that way.")
     elif "take" in command:
         item_name = command[5:]
         found_item = None
@@ -462,13 +308,5 @@ while playing:
                 player.inventory.append(found_item)
                 player.current_location.items.remove(found_item)
 
-        try:
-            room_name = current_node["PATHS"][command]
-            current_node = world_map[room_name]
-        except KeyError:
-            print("I can't go that way.")
-
     else:
         print("Command not recognized.")
-found_item = None
-for item in player.current_location.items:
