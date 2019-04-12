@@ -9,7 +9,6 @@ class Car(Vehicle):
         self.engine_status = False
         self.fuel = 100
 
-
     def start_engine(self):
         self.engine_status = True
         print("You turn the key and the engine starts.")
@@ -26,10 +25,10 @@ class Car(Vehicle):
         self.engine_status = False
         print("You turn the engine off.")
 
+
 class Viper(Car):
     def __init__(self):
         super(Viper, self). __init__("Viper")
-
 
 
 class Tesla(Car):
@@ -39,6 +38,7 @@ class Tesla(Car):
     def start_engine(self):
         self.engine_status = True
         print("You push the button and the engine starts.")
+
 
 guled_car = Viper()
 guled_car.start_engine()

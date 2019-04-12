@@ -1,13 +1,13 @@
 class Room(object):
     # This is a constructor
-    def __init__(self, name="", north=None, south=None, east=None, west=None, description=""):
+    def __init__(self, name="", north=None, south=None, east=None, west=None, description="", item):
         self.name = name
         self.north = north
         self.south = south
         self.east = east
         self.west = west
         self.description = description
-
+        self.item = item
 
 class Player(object):
     def __init__(self, name, starting_location, weapon, armor):
@@ -122,20 +122,21 @@ class Acura(Vehicle):
 
 
 class Consumables(Item):
-    def __init__(self, name):
-        super(Consumables, self).__init__(name)
+    def __init__(self, name, health_added):
+        super(Consumables, self).__init__(name,)
+        self.health_added = health_added
         self.heal = True
 
 
 class Bandages(Consumables):
-    def __init__(self, name):
-        super(Bandages, self).__init__(name)
+    def __init__(self, name, health_added):
+        super(Bandages, self).__init__(name, health_added)
         self.health = 30
 
 
 class MedKit(Consumables):
-    def __init__(self, name):
-        super(MedKit, self).__init__(name)
+    def __init__(self, name, health_added):
+        super(MedKit, self).__init__(name, health_added)
         self.gain_health = 50
 
 
@@ -151,9 +152,9 @@ class ScaleArmor(Armor):
         self.add_health = 100
 
 
-class Brigandine(Armor):
+class BrigandineArmor(Armor):
     def __init__(self, name, armor_amt):
-        super(Brigandine, self).__init__(name, armor_amt)
+        super(BrigandineArmor, self).__init__(name, armor_amt)
         self.health_added = 150
 
 
@@ -197,12 +198,12 @@ class Enemy(Character):
         print("%s has %d health left" % (self.name, self.health))
 
     def attack(self, target):
-        print("%s attacks %s for %d damage" %(self.name, target.name, self.weapon.damage))
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
         target.take_damage(self.weapon.damage)
 
 
 # Items
-knife = Knife("Boning knife")
+knife = Knife("Knife")
 m16 = M16("M16")
 sword = Sword("Sword")
 shotgun = Shotgun("Shotgun")
@@ -212,15 +213,17 @@ toyota = Vehicle("Toyota")
 lamborghini = Vehicle("Lamborghini")
 acura = Vehicle("NSX")
 wiebe_armor = Armor("Armor of the Teachers", 100)
-
+scale_armor = ScaleArmor("ScaleArmor", 100)
+brigandine_armor = BrigandineArmor("BrigandineArmor", 150)
 # Characters
 orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
 wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
-enemy = Character("Enemy", 150,)
+enemy = Character("Enemy", 150, shotgun, scale_armor)
 
 
 # Option 1 - Use the variables,but fix later
-living_room = Room("Living Room", None, None, None, None, "This is where you live and start.")
+living_room = Room("Living Room", None, None, None, None, "This is where you live and start or if you already "
+                                                          "moved, this is where you spawned.")
 dining_room = Room("Eating Area", None, None, None, None, "This is where you eat.")
 outside = Room("Outside of the house", None, None, None, None,
                "You are outside of the house and you can not go any farther and you must go back.")
@@ -277,7 +280,7 @@ short_directions = ['n', 's', 'e', 'w']
 playing = True
 
 player = Player("person1", living_room, sword, wiebe_armor)
-
+# Controller
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
