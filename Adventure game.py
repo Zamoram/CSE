@@ -1,6 +1,6 @@
 class Room(object):
     # This is a constructor
-    def __init__(self, name="", north=None, south=None, east=None, west=None, description="", item):
+    def __init__(self, name="", north=None, south=None, east=None, west=None, description="", item=""):
         self.name = name
         self.north = north
         self.south = south
@@ -8,6 +8,7 @@ class Room(object):
         self.west = west
         self.description = description
         self.item = item
+
 
 class Player(object):
     def __init__(self, name, starting_location, weapon, armor):
@@ -180,7 +181,7 @@ class Character(object):
         target.take_damage(self.weapon.damage)
 
 
-class Enemy(Character):
+class Enemy(object):
     def __init__(self, name, health, weapon, armor):
         self.name = name
         self.health = health
@@ -220,27 +221,27 @@ orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
 wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
 enemy = Character("Enemy", 150, shotgun, scale_armor)
 
-
+# north=None, south=None, east=None, west=None
 # Option 1 - Use the variables,but fix later
-living_room = Room("Living Room", None, None, None, None, "This is where you live and start or if you already "
-                                                          "moved, this is where you spawned.")
-dining_room = Room("Eating Area", None, None, None, None, "This is where you eat.")
-outside = Room("Outside of the house", None, None, None, None,
-               "You are outside of the house and you can not go any farther and you must go back.")
-kitchen = Room("The Eater", None, None, None, None, "This is where you cook food")
-bedroom1 = Room("Place to sleep", None, None, None, None,
+living_room = Room("This is a living room", "Outside", "Dining Room", None, None, "This is where you live and start "
+                                                    "or if you already " "moved, this is where you spawned." )
+dining_room = Room("Dining Room", "Living Room", "Kitchen", "Bed Room1", "Bed Room2", "This is where you eat.")
+outside = Room("Outside of the house", "Neighbors House", "Living Room", "Elementary School", "Garage",
+               "You are outside of the house and you have four options to go from here, choose your next path.")
+kitchen = Room("Kitchen", "Dining Room", "Laundry Room", None, "Hallway", "This is where you cook food")
+bedroom1 = Room("This is Bed Room1", "Restroom", None, None, "Dining Room",
                 "This is where you sleep and do your homework and where you play video games.")
-restroom = Room("A place you do your business", None, None, None, None, "This is where you go to relieve yourself.")
-bedroom2 = Room("The Sleeper", None, None, None, None, "This is where you go to sleep")
-hallway = Room("The intersection", None, None, None, None, "This leads to many routes")
-laundry_room = Room("The washing room", None, None, None, None, "This is where you go to wash your clothes.")
-bedroom3 = Room("The guest bedroom", None, None, None, None,
+restroom = Room("A place you do your business also known as the Restroom", None, "Bed Room1", None, None, "You have.")
+bedroom2 = Room("The Sleeper", None, "Hallway", "Dining Room", None, "This is where you go to sleep")
+hallway = Room("The intersection", "Bed Room2", "BedRoom3", "Kitchen", "Bathroom", "This leads to many routes")
+laundry_room = Room("Laundry Room", "Kitchen", None, None, None, "This is where you go to wash your clothes.")
+bedroom3 = Room("Bed Room3", "Hallway", None, None, None,
                 "This is where your guests can go to sleep when you have visitors over.")
-bathroom = Room("The pooper", None, None, None, None, "Another room to take care of your business.")
-restroom1 = Room("The buisness taker", None, None, None, None, "This is the first bathroom built in the house.")
-garage = Room("The car storer", None, None, None, None, "This is where you park your cars.")
-neighbors_house = Room("The Neighbor.", None, None, None, None, "This is where your neighbor lives.")
-elementary_school = Room("Jackson", None, None, None, None, "This is where you went to school.")
+bathroom = Room("Bathroom", None, None, "Hallway", None, "Another room to take care of your business.")
+restroom1 = Room("Restroom1", None, "Bed Room1", None, None, "This is the first bathroom built in the house.")
+garage = Room("Garage", None, None, "Outside", None, "This is where you park your cars.")
+neighbors_house = Room("The Neighbor.", None, "Outside", None, None, "This is where your neighbor lives.")
+elementary_school = Room("Elementary School", None, None, None, "Outside", "This is where you went to school.")
 
 
 # Fixes
