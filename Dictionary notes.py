@@ -53,7 +53,7 @@ complex_dictionary = {
     },
     "WI": {
         "NAME": "Wisconsin",
-        "POPULATION": 58000000 # 58,000,000
+        "POPULATION": 58000000, # 58,000,000
         "CITIES": [
             "Madison",
             "Milwaukee",
@@ -62,7 +62,7 @@ complex_dictionary = {
     },
     "NY": {
         "NAME": "New York",
-        "POPULATION": 19500000 # 19,500,000
+        "POPULATION": 19500000, # 19,500,000
         "CITIES": [
             "New York City",
             "Rochester",
