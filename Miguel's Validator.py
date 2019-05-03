@@ -1,22 +1,16 @@
-test_num = "6151359320238050"
+test_num = "4556737586899855"
 
 
 def validate(num: str):
-    for index in range(len(My_List)):
-        My_List[index] = int(My_List[index])
-        for index in range(len(num)):  # This is for the odd numbered positions but it needs work.
-            test_num = int(num[index])
-
-
-My_List = list(test_num)
-print(My_List)
-print(len(My_List))
-
-
-print(validate(test_num))
-num_list = list(test_num)
-num_list.pop(15)
-print(num_list)
+    num_list = list(num)
+    last_num = int(num_list.pop(15))
+    reverse_form = reverse_it(num_list)
+    print(reverse_form)
+    for index in range(len(reverse_form)):
+        reverse_form[index] = int(reverse_form[index])
+        for index in range(len(reverse_form)):  # This is for the odd numbered positions but it needs work.
+            reverse_form[index] = int(reverse_form[index])
+    print(reverse_form)
 
 
 def remember_last_digit(num: str):
@@ -30,4 +24,4 @@ def reverse_it(test_num):
     return test_num[::-1]
 
 
-print(reverse_it("615135932023805"))
+print(validate(test_num))
