@@ -11,7 +11,8 @@ def validate(num: str):
         for index in range(len(reverse_form)):  # This is for the odd numbered positions but it needs work.
             reverse_form[index] = int(reverse_form[index])
     print(reverse_form)
-
+for num_list in range(len(test_num)):
+    if test_num[num_list] == ""
 
 def remember_last_digit(num: str):
     last_num = int(num[0])  # This needs work on, this is to remember the last digit.
@@ -25,3 +26,4 @@ def reverse_it(test_num):
 
 
 print(validate(test_num))
+
