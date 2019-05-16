@@ -21,34 +21,59 @@ with open("Sales Records.csv", 'r') as csv_file_thing:
     asia_total = 0
     central_america_and_the_caribbean_total = 0
     north_america_total = 0
+    fruit_unit_total = 0
+    meat_unit_total = 0
+    clothes_unit_total = 0
+    beverages_unit_total = 0
+    office_supplies_unit_total = 0
+    cosmetics_unit_total = 0
+    snacks_unit_total = 0
+    personal_care_unit_total = 0
+    household_unit_total = 0
+    vegetables_unit_total = 0
+    baby_food_unit_total = 0
+    cereal_unit_total = 0
     for row in reader:
         profits = row[13]
+        units_sold = row[8]
         item_type = row[2]
         region = row[0]
         if item_type == "Fruits":
             fruits_total += float(profits)
+            fruit_unit_total += int(units_sold)
         if item_type == "Meat":
             meat_total += float(profits)
+            meat_unit_total += int(units_sold)
         if item_type == "Clothes":
             clothes_total += float(profits)
+            clothes_unit_total += int(units_sold)
         if item_type == "Beverages":
             beverages_total += float(profits)
+            beverages_unit_total += int(units_sold)
         if item_type == "Office Supplies":
             office_supplies_total += float(profits)
+            office_supplies_unit_total += int(units_sold)
         if item_type == "Cosmetics":
             cosmetics_total += float(profits)
+            cosmetics_unit_total += int(units_sold)
         if item_type == "Snacks":
             snacks_total += float(profits)
+            snacks_unit_total += int(units_sold)
         if item_type == "Personal Care":
             personal_care_total += float(profits)
+            personal_care_unit_total += int(units_sold)
         if item_type == "Household":
             household_total += float(profits)
+            household_unit_total += int(units_sold)
         if item_type == "Vegetables":
             vegetables_total += float(profits)
+            vegetables_unit_total += int(units_sold)
         if item_type == "Baby Food":
             baby_food_total += float(profits)
+            baby_food_unit_total += int(units_sold)
         if item_type == "Cereal":
             cereal_total += float(profits)
+            cereal_unit_total += int(units_sold)
         if region == "Sub-Saharan Africa":
             sub_saharan_africa_total += float(profits)
         if region == "Middle East and North Africa":
@@ -64,18 +89,18 @@ with open("Sales Records.csv", 'r') as csv_file_thing:
         if region == "North America":
             north_america_total += float(profits)
 
-    print("Fruits", fruits_total)
-    print("Meat", meat_total)
-    print("Clothes", clothes_total)
-    print("Beverages", beverages_total)
-    print("Office Supplies", office_supplies_total)
-    print("Cosmetics", cosmetics_total)
-    print("Snacks", snacks_total)
-    print("Personal Care", personal_care_total)
-    print("Household", household_total)
-    print("Vegetables", vegetables_total)
-    print("Baby Food", baby_food_total)
-    print("Cereal", cereal_total)
+    print("Fruits", fruits_total, fruit_unit_total)
+    print("Meat", meat_total, meat_unit_total)
+    print("Clothes", clothes_total, clothes_unit_total)
+    print("Beverages", beverages_total, beverages_unit_total)
+    print("Office Supplies", office_supplies_total, office_supplies_unit_total)
+    print("Cosmetics", cosmetics_total, cosmetics_unit_total)
+    print("Snacks", snacks_total, snacks_unit_total)
+    print("Personal Care", personal_care_total, personal_care_unit_total)
+    print("Household", household_total, household_unit_total)
+    print("Vegetables", vegetables_total, vegetables_unit_total)
+    print("Baby Food", baby_food_total, baby_food_unit_total)
+    print("Cereal", cereal_total, cereal_unit_total)
     print("Sub-Saharan Africa", sub_saharan_africa_total)
     print("Middle East and South Africa", middle_east_and_north_africa_total)
     print("Australia and Oceania", australia_and_oceania_total)
@@ -99,3 +124,27 @@ highest_profit = max(profit_list)
 print(highest_profit)
 highest_index = profit_list.index(highest_profit)
 print(region[highest_index])
+
+fruit_average = fruits_total / fruit_unit_total
+meat_average = meat_total / meat_unit_total
+clothes_average = clothes_total / clothes_unit_total
+beverages_average = beverages_total / beverages_unit_total
+office_supplies_average = office_supplies_total / office_supplies_unit_total
+cosmetics_average = cosmetics_total / cosmetics_unit_total
+snacks_average = snacks_total / snacks_unit_total
+personal_care_average = personal_care_total / personal_care_unit_total
+household_average = household_total / household_unit_total
+vegetables_average = vegetables_total / vegetables_unit_total
+baby_food_average = baby_food_total / baby_food_unit_total
+
+print("Fruit",  fruit_average)
+print("Meat", meat_average)
+print("Clothes", clothes_average)
+print("Beverages", beverages_average)
+print("Office Supplies", office_supplies_average)
+print("Cosmetics", cosmetics_average)
+print("Snacks", snacks_average)
+print("Personal Care", personal_care_average)
+print("Household", household_average)
+print("Vegetables", vegetables_average)
+print("Baby Food", baby_food_average)
