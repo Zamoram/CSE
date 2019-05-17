@@ -133,6 +133,8 @@ class Player(object):
         self.inventory = []
 
 # Items
+
+
 knife = Weapon("Boning knife", -21)
 m16 = Weapon("M16", -38)
 sword = Weapon("Sword", -22)
@@ -143,6 +145,11 @@ toyota = Vehicle("Toyota", 60)
 lamborghini = Vehicle("Lamborghini", 200)
 acura = Vehicle("NSX", 125)
 wiebe_armor = Armor("Armor of the Teachers", 100)
+bandages = Consumables("Bandages", 30)
+med_kit = Consumables("Med Kit", 50)
+scale_armour
+
+
 
 # Characters
 orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))

@@ -136,6 +136,7 @@ personal_care_average = personal_care_total / personal_care_unit_total
 household_average = household_total / household_unit_total
 vegetables_average = vegetables_total / vegetables_unit_total
 baby_food_average = baby_food_total / baby_food_unit_total
+cereal_average = cereal_total / cereal_unit_total
 
 print("Fruit",  fruit_average)
 print("Meat", meat_average)
@@ -148,3 +149,14 @@ print("Personal Care", personal_care_average)
 print("Household", household_average)
 print("Vegetables", vegetables_average)
 print("Baby Food", baby_food_average)
+print("Cereal", cereal_average)
+
+item_type = ['Fruits', 'Meat', ' Clothes', 'Beverages', 'Office Supplies', 'Cosmetics', 'Snacks',
+             'Personal Care', 'Household', 'Vegetables', 'Baby Food', 'Cereal']
+highest_average_list = [fruit_average, meat_average, clothes_average, beverages_average, office_supplies_average,
+                          cosmetics_average, snacks_average, personal_care_average, household_average,
+                          vegetables_average, baby_food_average, cereal_average]
+highest_average_profit = max(highest_average_list)
+print(highest_average_profit)
+highest_average_index = highest_average_list.index(highest_average_profit)
+print(item_type[highest_average_index])
