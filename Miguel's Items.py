@@ -106,6 +106,11 @@ class Brigandine(Armor):
         self.health_added =+ 150
 
 
+class Gladiator_Armor(Armor):
+    def __init__(self, name):
+        super(Gladiator_Armor, )
+
+
 class Character(object):
     def __init__(self, name, health, weapon, armor):
         self.name = name
@@ -144,17 +149,19 @@ canoe = Weapon("Canoe", -15)
 toyota = Vehicle("Toyota", 60)
 lamborghini = Vehicle("Lamborghini", 200)
 acura = Vehicle("NSX", 125)
-wiebe_armor = Armor("Armor of the Teachers", 100)
+_armor = Armor("Armor of the Teachers", 100)
 bandages = Consumables("Bandages", 30)
 med_kit = Consumables("Med Kit", 50)
-scale_armour
+scale_armor = Consumables("Scale Armor", 100)
+brigandine_armor = Consumables("Brigandine Armor", 150)
 
 
 
 # Characters
-orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
-wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
+enemy = Character("Enemy", 100, sword, Armor("Scale Armor", 100))
+player1 = Character("Player1", 100, canoe, Armor("Brigandine Armor", 150))
 
-orc.attack(wiebe)
-wiebe.attack(orc)
-wiebe.attack(orc)
+enemy.attack(player1)
+player1.attack(enemy)
+player1.attack(enemy)
+enemy.attack(player1)

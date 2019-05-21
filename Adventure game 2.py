@@ -76,8 +76,27 @@ class M16(Weapon):
 
 class Sword(Weapon):
     def __init__(self, name):
-        super(Sword, self).__init__(name, 22)
-        self.slash = -22
+        super(Sword, self).__init__(name)
+        self.protection = 40
+        self.usage_left = 100
+
+    def swinging(self):
+        self.usage_left -= 1
+        print("You are swinging the sword")
+
+    def block(self):
+        self.protection -= 1
+        print("Used the sword as a protection")
+
+
+class Iron(Sword):
+    def __init__(self):
+        super(Iron, self).__init__("Iron Sword")
+
+
+class Steel(Sword):
+    def __init__(self):
+        super(Steel, self).__init__("Steel Sword")
 
 
 class Shotgun(Weapon):
@@ -226,8 +245,8 @@ enemy = Character("Enemy", 150, shotgun, scale_armor)
 
 # north=None, south=None, east=None, west=None
 # Option 1 - Use the variables,but fix later
-living_room = Room("This is a living room", "Outside", "Dining Room", None, None, "This is where you live and start "
-                                                    "or if you already " "moved, this is where you spawned." )
+living_room = Room("This is a living room", Sword,  "Outside", "Dining Room", None, None, "This is where you live and start "
+                                                    "or if you already " "moved, this is where you spawned.",)
 dining_room = Room("Dining Room", "Living Room", "Kitchen", "Bed Room1", "Bed Room2", "This is where you eat.")
 outside = Room("Outside of the house", "Neighbors House", "Living Room", "Elementary School", "Garage",
                "You are outside of the house and you have four options to go from here, choose your next path.")
@@ -305,6 +324,38 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way.")
+    elif "take" in command.lower():
+        if player.current_location.items is not None:
+            item_name = command[5:]
+            item_found = None
+            if player.current_location.items.name.lower() == item_name.lower():
+                item_found = player.current_location.items
+
+            if item_found is not None:
+                player.inventory.append(item_found)
+                player.current_location.items = None
+        else:
+            print("There are not items here")
+
+    elif "drop" in command.lower():
+        if player.current_location.items is None:
+            item_name = command[5:]
+            drop_item = None
+            for item in player.inventory:
+                if item.name.lower() == item_name.lower():
+                    drop_item = item
+
+            if drop_item is not None:
+                player.current_location.items = drop_item
+                player.inventory.remove(drop_item)
+        else:
+            print("There is already an item here.")
+
+    elif "use" in command.lower():
+        if player.current_location.items is None:
+            item_name = command[5:]
+            use_item = None
+            for item in player.inventory
 
     else:
         print("Command not recognized.")
