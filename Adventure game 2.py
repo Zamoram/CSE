@@ -61,24 +61,52 @@ class Weapon(Item):
         self.damage = damage
 
 
+class Shield(Item):
+    def __init__(self, name):
+        super(Shield, self).__init__(name)
+        self.usage_left = 100
+        self.protection = 100
+
+    def use_shield(self):
+        self.usage_left -= 1
+        print("You use the Shield")
+
+
+class Big(Shield):
+    def __init__(self):
+        super(Big, self).__init__("Big Shield")
+
+
+class Small(Shield):
+    def __init__(self):
+        super(Small, self).__init__("Small Shield")
+
+
 class Knife(Weapon):
     def __init__(self, name):
         super(Knife, self).__init__(name, 21)
         self.stab = True
-        self.shank = 21
+        self.damage -= 21
+
+
+class Sharp(Knife):
+    def __init__(self):
+        super(Sharp, self).__init__("Sharp Knife")
 
 
 class M16(Weapon):
     def __init__(self, name):
         super(M16, self).__init__(name, 38)
-        self.shoot = -38
+        self.shoot = True
+        self.damage -= 38
 
 
 class Sword(Weapon):
     def __init__(self, name):
-        super(Sword, self).__init__(name)
-        self.protection = 40
-        self.usage_left = 100
+        super(Sword, self).__init__(name, 45)
+        self.protection = 30
+        self.usage_left = 70
+        self.damage = 45
 
     def swinging(self):
         self.usage_left -= 1
@@ -89,9 +117,9 @@ class Sword(Weapon):
         print("Used the sword as a protection")
 
 
-class Iron(Sword):
+class Wooden(Sword):
     def __init__(self):
-        super(Iron, self).__init__("Iron Sword")
+        super(Wooden, self).__init__("Wooden Sword")
 
 
 class Steel(Sword):
@@ -102,19 +130,26 @@ class Steel(Sword):
 class Shotgun(Weapon):
     def __init__(self, name):
         super(Shotgun, self).__init__(name, 25)
-        self.blast = -25
+        self.blast = True
+        self.damage -= 25
+
+    def hit(self):
+        self.hit -= 1
+        print("You whacked the player")
 
 
 class Grenades(Weapon):
     def __init__(self, name):
         super(Grenades, self).__init__(name, 30)
-        self.explosive = -30
+        self.explode = True
+        self.damage -= 30
 
 
 class Canoe(Weapon):
     def __init__(self, name):
         super(Canoe, self).__init__(name, 15)
-        self.whack = -15
+        self.whack = True
+        self.damage -= 15
 
 
 class Vehicle(Item):
@@ -157,7 +192,7 @@ class Bandages(Consumables):
 class MedKit(Consumables):
     def __init__(self, name, health_added):
         super(MedKit, self).__init__(name, health_added)
-        self.gain_health = 50
+        self.heal += 50
 
 
 class Armor(Item):
@@ -169,13 +204,13 @@ class Armor(Item):
 class ScaleArmor(Armor):
     def __init__(self, name, armor_amt):
         super(ScaleArmor, self).__init__(name, armor_amt)
-        self.add_health = 100
+        self.armor_amt += 100
 
 
 class BrigandineArmor(Armor):
     def __init__(self, name, armor_amt):
         super(BrigandineArmor, self).__init__(name, armor_amt)
-        self.health_added = 150
+        self.armor_amt += 150
 
 
 class Character(object):
@@ -208,8 +243,8 @@ class Enemy(object):
         self.armor = armor
 
     def take_damage(self, damage):
-        if damage < self.armor.armor_amt:
-            print("No damage is done because of some Fabulous armor!")
+        if damage > self.armor.armor_amt:
+            print("I've been hurt!")
         else:
             self. health -= damage - self.armor.armor_amt
             if self.health < 0:
@@ -223,30 +258,26 @@ class Enemy(object):
 
 
 # Items
-knife = Weapon("Boning knife", -21)
+knife = Weapon("Sharp knife", -21)
 m16 = Weapon("M16", -38)
 sword = Weapon("Sword", -22)
 shotgun = Weapon("Shotgun", -25)
 grenades = Weapon("Grenades", -30)
 canoe = Weapon("Canoe", -15)
-toyota = Vehicle("Toyota",)
-lamborghini = Vehicle("Lamborghini",)
-acura = Vehicle("NSX",)
+toyota = Vehicle("Toyota")
+lamborghini = Vehicle("Lamborghini")
+acura = Vehicle("NSX")
 wiebe_armor = Armor("Armor of the Teachers", 100)
 bandages = Consumables("Bandages", 30)
 med_kit = Consumables("Med Kit", 50)
 scale_armor = Consumables("Scale Armor", 100)
 brigandine_armor = Consumables("Brigandine", 150)
 
-# Characters
-orc = Character("Orc", 100, sword, Armor("Generic Armor", 2))
-wiebe = Character("Wiebe", 100, canoe, wiebe_armor)
-enemy = Character("Enemy", 150, shotgun, scale_armor)
 
 # north=None, south=None, east=None, west=None
 # Option 1 - Use the variables,but fix later
-living_room = Room("This is a living room", Sword,  "Outside", "Dining Room", None, None, "This is where you live and start "
-                                                    "or if you already " "moved, this is where you spawned.",)
+living_room = Room("This is a living room", Sword("Sword"), "Outside", "Dining Room", None, None,
+            "This is where you live and start or if you already moved, this is where you spawned.",)
 dining_room = Room("Dining Room", "Living Room", "Kitchen", "Bed Room1", "Bed Room2", "This is where you eat.")
 outside = Room("Outside of the house", "Neighbors House", "Living Room", "Elementary School", "Garage",
                "You are outside of the house and you have four options to go from here, choose your next path.")
@@ -297,12 +328,21 @@ garage.east = outside
 neighbors_house.south = outside
 elementary_school.west = outside
 
+# Characters
+class Enemy(object):
+    def __init__(self, name):
+        self.name = name
+
+class Rival(Enemy):
+    def __index__(self,):
+        super(Rival, self).__init__("Zeus")
+
+
+player = Player("David", living_room, sword, wiebe_armor)
 
 directions = ['north', 'south', 'east', 'west']
 short_directions = ['n', 's', 'e', 'w']
 playing = True
-
-player = Player("person1", living_room, sword, wiebe_armor)
 # Controller
 while playing:
     print(player.current_location.name)
@@ -324,6 +364,7 @@ while playing:
             player.move(next_room)
         except KeyError:
             print("I can't go that way.")
+
     elif "take" in command.lower():
         if player.current_location.items is not None:
             item_name = command[5:]
@@ -350,12 +391,8 @@ while playing:
                 player.inventory.remove(drop_item)
         else:
             print("There is already an item here.")
-
-    elif "use" in command.lower():
+    elif "take" in command.lower():
         if player.current_location.items is None:
             item_name = command[5:]
-            use_item = None
-            for item in player.inventory
-
     else:
-        print("Command not recognized.")
+        print("Command not recognized")

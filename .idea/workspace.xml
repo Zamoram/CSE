@@ -90,19 +90,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Miguel's Sales info.py">
+        <entry file="file://$PROJECT_DIR$/Miguel's Adventure game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="151" column="31" lean-forward="true" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
+            <state relative-caret-position="4425">
+              <caret line="309" column="40" lean-forward="true" selection-start-line="309" selection-start-column="40" selection-end-line="309" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Adventure game 2.py">
+        <entry file="file://$PROJECT_DIR$/Miguel's Sales info.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="258" column="110" lean-forward="true" selection-start-line="258" selection-start-column="110" selection-end-line="258" selection-end-column="110" />
+            <state relative-caret-position="81">
+              <caret line="138" column="49" lean-forward="true" selection-start-line="138" selection-start-column="49" selection-end-line="138" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -110,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Miguel's Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="727">
+            <state relative-caret-position="753">
               <caret line="166" column="21" lean-forward="true" selection-start-line="166" selection-start-column="21" selection-end-line="166" selection-end-column="21" />
             </state>
           </provider>
@@ -126,10 +126,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Miguel's Adventure game.py">
+        <entry file="file://$PROJECT_DIR$/Adventure game 2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="309" column="40" lean-forward="true" selection-start-line="309" selection-start-column="40" selection-end-line="309" selection-end-column="40" />
+            <state relative-caret-position="506">
+              <caret line="365" column="41" lean-forward="true" selection-start-line="365" selection-start-column="41" selection-end-line="365" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -185,8 +185,8 @@
         <option value="$PROJECT_DIR$/Miguel's Sales Validator.py" />
         <option value="$PROJECT_DIR$/Miguel's Validator.py" />
         <option value="$PROJECT_DIR$/Miguel's Sales info.py" />
-        <option value="$PROJECT_DIR$/Miguel's Adventure game.py" />
         <option value="$PROJECT_DIR$/Miguel's Items.py" />
+        <option value="$PROJECT_DIR$/Miguel's Adventure game.py" />
         <option value="$PROJECT_DIR$/Adventure game 2.py" />
       </list>
     </option>
@@ -421,12 +421,13 @@
       <workItem from="1557953053554" duration="3250000" />
       <workItem from="1558039559875" duration="3184000" />
       <workItem from="1558126905947" duration="2814000" />
-      <workItem from="1558467213256" duration="5876000" />
+      <workItem from="1558467213256" duration="5919000" />
+      <workItem from="1558639873997" duration="6356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57754000" />
+    <option name="totallyTimeSpent" value="64153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,7 +442,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18550107" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -493,9 +494,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CSE$CSV_notes.coverage" NAME="CSV notes Coverage Results" MODIFIED="1556659039727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CSE$Miguel_s_Validator.coverage" NAME="Miguel's Validator Coverage Results" MODIFIED="1558040566126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Miguel_s_Sales_info.coverage" NAME="Miguel's Sales info Coverage Results" MODIFIED="1558472645176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Miguel_s_Adventure_game.coverage" NAME="Miguel's Adventure game Coverage Results" MODIFIED="1558473334439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CSE$Adventure_game_2.coverage" NAME="Adventure game 2 Coverage Results" MODIFIED="1558473484358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Miguel_s_Sales_info.coverage" NAME="Miguel's Sales info Coverage Results" MODIFIED="1558642711943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Miguel_s_Adventure_game.coverage" NAME="Miguel's Adventure game Coverage Results" MODIFIED="1558645577422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CSE$Adventure_game_2.coverage" NAME="Adventure game 2 Coverage Results" MODIFIED="1558646447025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/notes/python notes.py">
@@ -702,29 +703,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Miguel's Sales info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="151" column="31" lean-forward="true" selection-start-line="151" selection-start-column="31" selection-end-line="151" selection-end-column="31" />
+        <state relative-caret-position="81">
+          <caret line="138" column="49" lean-forward="true" selection-start-line="138" selection-start-column="49" selection-end-line="138" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Miguel's Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
+        <state relative-caret-position="753">
           <caret line="166" column="21" lean-forward="true" selection-start-line="166" selection-start-column="21" selection-end-line="166" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Adventure game 2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="258" column="110" lean-forward="true" selection-start-line="258" selection-start-column="110" selection-end-line="258" selection-end-column="110" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Miguel's Adventure game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
+        <state relative-caret-position="4425">
           <caret line="309" column="40" lean-forward="true" selection-start-line="309" selection-start-column="40" selection-end-line="309" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Adventure game 2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="365" column="41" lean-forward="true" selection-start-line="365" selection-start-column="41" selection-end-line="365" selection-end-column="41" />
         </state>
       </provider>
     </entry>
